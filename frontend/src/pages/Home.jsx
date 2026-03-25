@@ -13,133 +13,143 @@ export const Home = () => {
   });
 
   useEffect(() => {
-    const animateCounts = () => {
-      const duration = 2000;
-      const steps = 60;
-      const interval = duration / steps;
+    const duration = 2000;
+    const steps = 60;
+    const interval = duration / steps;
+    let step = 0;
 
-      let step = 0;
-      const timer = setInterval(() => {
-        step++;
-        const progress = step / steps;
+    const timer = setInterval(() => {
+      step++;
+      const progress = step / steps;
 
-        setCounts({
-          aum: Math.floor(247 * progress),
-          clients: Math.floor(850 * progress),
-          return: (14.2 * progress).toFixed(1),
-          year: 2018,
-        });
+      setCounts({
+        aum: Math.floor(6 * progress),
+        clients: Math.floor(10 * progress),
+        return: (18.15 * progress).toFixed(1),
+        year: 2025,
+      });
 
-        if (step >= steps) clearInterval(timer);
-      }, interval);
-    };
+      if (step >= steps) clearInterval(timer);
+    }, interval);
 
-    animateCounts();
+    return () => clearInterval(timer);
   }, []);
 
   const stats = [
     {
-      value: `$${counts.aum}M`,
+      value: `$${counts.aum}K`,
       label: 'Assets Under Management',
-      color: 'text-primary',
+      color: 'text-[#E2C17B]',
     },
     {
       value: `${counts.clients}+`,
       label: 'Trusted Clients',
-      color: 'text-secondary',
+      color: 'text-[#E2C17B]',
     },
     {
       value: `${counts.return}%`,
       label: 'Avg Quarterly Return',
-      color: 'text-primary',
+      color: 'text-[#E2C17B]',
     },
     {
       value: counts.year,
       label: 'Established',
-      color: 'text-secondary',
+      color: 'text-[#E2C17B]',
     },
   ];
 
   return (
-    <div className="min-h-screen">
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl"></div>
-        </div>
+    <div className="min-h-screen pt-28 pb-24 bg-gradient-to-b from-[#162840] via-black to-black text-white">
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+        <div className="container mx-auto px-6 text-center max-w-5xl">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A67D32]/30 bg-[#A67D32]/10 text-sm"
+          >
+            <TrendingUp className="w-4 h-4 text-[#E2C17B]" />
+            <span className="text-[#E2C17B]/90">
+              99% Data-Driven Fund Management
+            </span>
+          </motion.div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-5xl mx-auto text-center space-y-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-sm"
-            >
-              <TrendingUp className="w-4 h-4 text-primary" />
-              <span className="text-muted-foreground">99% Data-Driven Fund Management</span>
-            </motion.div>
+          {/* Title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mt-8 text-5xl md:text-6xl font-bold leading-tight"
+          >
+            Ardhana <br />
+            <span className="bg-gradient-to-r from-[#BFAA6B] via-[#A67D32] to-[#8C693E] bg-clip-text text-transparent">
+              Capital
+            </span>
+          </motion.h1>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="section-title"
-            >
-              Ardhana
-              <br />
-              <span className="gradient-text">Capital</span>
-            </motion.h1>
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-6 text-lg text-white/60 max-w-3xl mx-auto"
+          >
+            Elite fund management powered by data intelligence and disciplined risk management.
+            We educate, we transparency, we perform.
+          </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-            >
-              Elite fund management powered by data intelligence and disciplined risk management.
-              We educate, we transparency, we perform.
-            </motion.p>
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Link to="/ArdhanaCapital/performance">
+              <Button className="
+                bg-[#A67D32] 
+                hover:bg-[#BFAA6B]
+                text-black 
+                hover:text-black
+                font-semibold 
+                px-8 h-12
+                transition-colors
+                ">
+                 View Portfolio Performance
+              </Button>
+            </Link>
+            <Link to="/ArdhanaCapital/approach">
+              <Button
+              variant="outline"
+              className="
+             border-[#A67D32]/50 
+             text-[#E2C17B]
+             hover:bg-[#A67D32]/25
+             hover:text-white
+             transition-colors
+             px-8 h-12">
+             Learn Our Approach
+            </Button>
+            </Link>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-              <Link to="/performance">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 h-12 text-base group"
-                >
-                  View Portfolio Performance
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link to="/approach">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-border hover:bg-muted h-12 px-8 text-base"
-                >
-                  Learn Our Approach
-                </Button>
-              </Link>
-            </motion.div>
-          </div>
-
+          {/* STATS */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16 md:mt-24 max-w-6xl mx-auto"
+            transition={{ delay: 0.4 }}
+            className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            {stats.map((stat, index) => (
-              <div key={index} className="stat-card p-6 text-center">
-                <div className={`metric-value text-3xl md:text-4xl mb-2 ${stat.color}`}>
+            {stats.map((stat, i) => (
+              <div
+                key={i}
+                className="rounded-2xl bg-[#0D0D0D] border border-[#162840] p-6 text-center"
+              >
+                <div className={`text-3xl font-bold mb-2 ${stat.color}`}>
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wide">
+                <div className="text-xs uppercase tracking-wide text-white/50">
                   {stat.label}
                 </div>
               </div>
@@ -148,85 +158,44 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 md:py-32 relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-6">
-              Why Choose <span className="text-primary">Ardhana Capital</span>
+      {/* WHY CHOOSE */}
+      <section className="pt-28">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Why Choose{' '}
+              <span className="bg-gradient-to-r from-[#BFAA6B] via-[#A67D32] to-[#8C693E] bg-clip-text text-transparent">
+                Ardhana Capital
+              </span>
             </h2>
-            <p className="text-lg text-muted-foreground">
-              We combine cutting-edge data analytics with time-tested investment principles
+            <p className="text-white/60">
+              Data intelligence combined with disciplined execution
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              {
-                icon: LineChart,
-                title: 'Data-Driven',
-                description: '99% of decisions backed by quantitative analysis and market intelligence',
-              },
-              {
-                icon: Shield,
-                title: 'Risk Management',
-                description: 'Systematic approach to capital preservation and downside protection',
-              },
-              {
-                icon: TrendingUp,
-                title: 'Consistent Returns',
-                description: '14.2% average quarterly returns through disciplined strategy execution',
-              },
-              {
-                icon: Users,
-                title: 'Client Education',
-                description: 'Complete transparency and ongoing education for informed partnership',
-              },
-            ].map((feature, index) => (
+              { icon: LineChart, title: 'Data-Driven', desc: 'Quantitative & market intelligence' },
+              { icon: Shield, title: 'Risk Management', desc: 'Capital protection first' },
+              { icon: TrendingUp, title: 'Consistent Returns', desc: '18.15% avg quarterly' },
+              { icon: Users, title: 'Client Education', desc: 'Transparent partnership' },
+            ].map((f, i) => (
               <motion.div
-                key={index}
+                key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="performance-card group"
+                transition={{ delay: i * 0.1 }}
+                className="rounded-2xl bg-[#0D0D0D] border border-[#162840] p-6"
               >
-                <div className="mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
+                <div className="w-12 h-12 rounded-lg bg-[#A67D32]/15 flex items-center justify-center mb-4">
+                  <f.icon className="w-6 h-6 text-[#E2C17B]" />
                 </div>
-                <h3 className="text-xl font-semibold font-display mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-[#ffffff]">
+                  {f.title}
+                </h3>
+                <p className="text-white/60">{f.desc}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-6">
-                Ready to Start Your Investment Journey?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Join over 850 clients who trust us with their financial future
-              </p>
-              <Link to="/contact">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 h-12 text-base"
-                >
-                  Contact Us
-                </Button>
-              </Link>
-            </motion.div>
           </div>
         </div>
       </section>

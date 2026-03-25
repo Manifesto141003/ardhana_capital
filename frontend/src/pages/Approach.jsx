@@ -19,7 +19,7 @@ export const Approach = () => {
       icon: Lightbulb,
       title: 'Continuous Learning',
       description:
-        'Markets evolve, and so do we. Our team continuously refines our models and strategies based on new data, market conditions, and emerging opportunities.',
+        'Markets evolve, and so do we. Our team continuously refines our models and strategies based on new data, changing market conditions, and emerging opportunities.',
     },
     {
       icon: Award,
@@ -30,171 +30,114 @@ export const Approach = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24 md:pt-32 pb-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-28 pb-24 bg-gradient-to-b from-[#162840] via-black to-black">
+      <div className="container mx-auto px-6">
+
+        {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-5xl mx-auto text-center mb-12"
+          className="text-center mb-14"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-6">
-            Our <span className="text-primary">Approach</span>
+          <h1 className="text-5xl font-bold mb-4 text-white">
+            Our{' '}
+            <span className="bg-gradient-to-r from-[#E2C17B] via-[#B88A3B] to-[#8C693E] bg-clip-text text-transparent">
+              Approach
+            </span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-white/60 text-lg">
             Four core principles guide every decision we make at Ardhana Capital.
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="performance-card mb-12 max-w-5xl mx-auto"
-        >
-          <h2 className="text-3xl font-bold font-display mb-6 text-center">
-            Transparency is Our Foundation
-          </h2>
-          <p className="text-muted-foreground text-center leading-relaxed max-w-3xl mx-auto mb-8">
-            We provide complete visibility into our portfolio performance, risk metrics, and
-            decision-making process. You'll always know where your capital is invested, how it's
-            performing, and why we made each strategic decision. Our quarterly reports break down every
-            aspect of fund performance with full transparency.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: '100%',
-                subtitle: 'Portfolio Visibility',
-                color: 'text-primary',
-              },
-              {
-                title: 'Quarterly',
-                subtitle: 'Detailed Reports',
-                color: 'text-secondary',
-              },
-              {
-                title: 'Real-Time',
-                subtitle: 'Data Access',
-                color: 'text-primary',
-              },
-            ].map((item, index) => (
-              <div key={index} className="stat-card p-6 text-center">
-                <div className={`text-4xl font-bold metric-value mb-2 ${item.color}`}>
-                  {item.title}
-                </div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wide">
-                  {item.subtitle}
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        {/* PRINCIPLES */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
           {principles.map((principle, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + index * 0.1 }}
-              className="performance-card group"
+              transition={{ delay: index * 0.1 }}
+              className="rounded-2xl bg-[#0B0F14] border border-[#1B2A3F] p-8 hover:border-[#B88A3B]/40 transition"
             >
-              <div className="mb-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <principle.icon className="w-6 h-6 text-primary" />
+              <div className="mb-5">
+                <div className="w-12 h-12 rounded-lg bg-[#B88A3B]/15 flex items-center justify-center">
+                  <principle.icon className="w-6 h-6 text-[#B88A3B]" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold font-display mb-3">{principle.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{principle.description}</p>
+
+              <h3 className="text-xl font-semibold mb-3 text-white">
+                {principle.title}
+              </h3>
+
+              <p className="text-white/60 leading-relaxed">
+                {principle.description}
+              </p>
             </motion.div>
           ))}
         </div>
 
+        {/* INVESTMENT PROCESS */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-          className="performance-card max-w-5xl mx-auto"
+          transition={{ delay: 0.4 }}
+          className="rounded-2xl bg-[#0B0F14] border border-[#1B2A3F] p-10"
         >
-          <h3 className="text-2xl font-bold font-display mb-6">Investment Process</h3>
-          <div className="space-y-6">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                  1
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2 text-lg">Market Analysis</h4>
-                <p className="text-muted-foreground">
-                  Our team analyzes market conditions, sector trends, and individual securities using
-                  proprietary quantitative models and data analytics platforms.
-                </p>
-              </div>
-            </div>
+          <h3 className="text-3xl font-bold mb-10 text-white text-center">
+            Investment Process
+          </h3>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                  2
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2 text-lg">Opportunity Identification</h4>
-                <p className="text-muted-foreground">
-                  We identify high-probability investment opportunities that meet our risk-adjusted
-                  return criteria and align with our portfolio strategy.
-                </p>
-              </div>
-            </div>
+          <div className="space-y-8">
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                  3
+            {[
+              {
+                title: 'Market Analysis',
+                description:
+                  'We classify market conditions as either ranging or trending and apply quantitative risk assessment before allocating capital to any trade.',
+              },
+              {
+                title: 'Opportunity Identification',
+                description:
+                  'Our team identifies market patterns based on historical and backtested data that align with our portfolio strategy.',
+              },
+              {
+                title: 'Risk Assessment',
+                description:
+                  'Each position is evaluated for risk exposure and proper position sizing relative to current market conditions to ensure disciplined risk management.',
+              },
+              {
+                title: 'Execution & Monitoring',
+                description:
+                  'Trades are executed systematically, and positions are continuously monitored using predefined exit criteria and stop-loss parameters.',
+              },
+              {
+                title: 'Performance Review',
+                description:
+                  'We conduct comprehensive quarterly reviews to evaluate strategy effectiveness, identify areas for refinement, and communicate performance results transparently to our clients.',
+              },
+            ].map((step, index) => (
+              <div key={index} className="flex gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#B88A3B]/20 flex items-center justify-center text-[#B88A3B] font-bold">
+                    {index + 1}
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2 text-lg">Risk Assessment</h4>
-                <p className="text-muted-foreground">
-                  Each position is evaluated for risk exposure, position sizing, and correlation with
-                  existing holdings to ensure proper diversification.
-                </p>
-              </div>
-            </div>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                  4
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">
+                    {step.title}
+                  </h4>
+                  <p className="text-white/60 leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
               </div>
-              <div>
-                <h4 className="font-semibold mb-2 text-lg">Execution & Monitoring</h4>
-                <p className="text-muted-foreground">
-                  Trades are executed systematically, and positions are monitored continuously with
-                  predefined exit criteria and stop-loss parameters.
-                </p>
-              </div>
-            </div>
+            ))}
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                  5
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2 text-lg">Performance Review</h4>
-                <p className="text-muted-foreground">
-                  We conduct thorough quarterly reviews to assess strategy effectiveness, identify areas
-                  for improvement, and communicate results to our clients.
-                </p>
-              </div>
-            </div>
           </div>
         </motion.div>
+
       </div>
     </div>
   );
