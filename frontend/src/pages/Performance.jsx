@@ -45,8 +45,8 @@ export const Performance = () => {
     {
       title: 'Quarter I',
       period: 'Aug – Oct 2025',
-      return: 31.68,
-      benchmark: 31.68,
+      return: 29.40,
+      benchmark: 29.40,
       outperformance: 0,
       status: 'done',
     },
@@ -77,12 +77,12 @@ export const Performance = () => {
   ];
 
   const yearlyData = [
-    { year: '2025', return: 28.31, benchmark: 28.31, status: 'done' },
-    { year: '2026', return: 11.79, benchmark: 11.79, status: 'ongoing' },
+    { year: '2025', return: 26.09, benchmark: 26.09, status: 'done' },
+    { year: '2026', return: 28.86, benchmark: 28.86, status: 'ongoing' },
   ];
 
   const data = viewMode === 'quarterly' ? quarterlyData : yearlyData;
-  const totalReturn = '+43,43%';
+  const totalReturn = '+43.43%';
 
   const badgeStyle = (status) =>
     status === 'done'
