@@ -61,8 +61,8 @@ export const Performance = () => {
     {
       title: 'Quarter III',
       period: 'Feb – Apr 2026',
-      return: 2.00,
-      benchmark: 2.00,
+      return: 17.58,
+      benchmark: 17.58,
       outperformance: 0,
       status: 'ongoing',
     },
