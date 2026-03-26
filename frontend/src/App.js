@@ -15,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Navigation />
         <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/performance" element={<Performance />} />
           <Route path="/risk-metrics" element={<RiskMetrics />} />
