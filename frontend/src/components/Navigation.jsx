@@ -18,10 +18,10 @@ export const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { path: '/ArdhanaCapital/performance', label: 'Performance' },
-    { path: '/ArdhanaCapital/risk-metrics', label: 'Risk Metrics' },
-    { path: '/ArdhanaCapital/education', label: 'Education' },
-    { path: '/ArdhanaCapital/approach', label: 'Approach' },
+    { path: '/performance', label: 'Performance' },
+    { path: '/risk-metrics', label: 'Risk Metrics' },
+    { path: '/education', label: 'Education' },
+    { path: '/approach', label: 'Approach' },
   ];
 
   return (
