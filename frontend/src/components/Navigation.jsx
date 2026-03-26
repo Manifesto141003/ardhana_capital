@@ -34,7 +34,7 @@ export const Navigation = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/ArdhanaCapital" className="flex items-center space-x-2 group">
+          <Link to="/home" className="flex items-center space-x-2 group">
             <span className="text-xl md:text-2xl font-bold font-display">
               Ardhana <span className="text-primary">Capital</span>
             </span>
@@ -58,7 +58,7 @@ export const Navigation = () => {
           </div>
 
           <div className="hidden md:block">
-            <Link to="/ArdhanaCapital/contact">
+            <Link to="/contact">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
                 Contact
               </Button>
