@@ -15,12 +15,12 @@ function App() {
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path="/ArdhanaCapital" element={<Home />} />
-          <Route path="/ArdhanaCapital/performance" element={<Performance />} />
-          <Route path="/ArdhanaCapital/risk-metrics" element={<RiskMetrics />} />
-          <Route path="/ArdhanaCapital/education" element={<Education />} />
-          <Route path="/ArdhanaCapital/approach" element={<Approach />} />
-          <Route path="/ArdhanaCapital/contact" element={<Contact />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/performance" element={<Performance />} />
+          <Route path="/risk-metrics" element={<RiskMetrics />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/approach" element={<Approach />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Toaster position="top-right" richColors />
       </BrowserRouter>

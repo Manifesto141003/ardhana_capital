@@ -106,7 +106,7 @@ export const Home = () => {
             transition={{ delay: 0.3 }}
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link to="/ArdhanaCapital/performance">
+            <Link to="/performance">
               <Button className="
                 bg-[#A67D32] 
                 hover:bg-[#BFAA6B]
@@ -119,7 +119,7 @@ export const Home = () => {
                  View Portfolio Performance
               </Button>
             </Link>
-            <Link to="/ArdhanaCapital/approach">
+            <Link to="/approach">
               <Button
               variant="outline"
               className="
