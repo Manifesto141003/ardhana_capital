@@ -82,7 +82,7 @@ export const Performance = () => {
   ];
 
   const data = viewMode === 'quarterly' ? quarterlyData : yearlyData;
-  const totalReturn = '+43.43%';
+  const totalReturn = '+62,48%';
 
   const badgeStyle = (status) =>
     status === 'done'
