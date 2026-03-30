@@ -207,7 +207,7 @@ export const Performance = () => {
                     </div>
 
                     <span className={`px-2 py-0.5 text-[11px] font-medium rounded-full ${badgeStyle(p.status)}`}>
-                      {p.status === 'done' ? 'Completed' : 'Ongoing'}
+                      {p.status === 'done' ? 'Completed' : p.status === 'ongoing' ? 'Ongoing' : 'Not Started'}
                     </span>
                   </div>
 
