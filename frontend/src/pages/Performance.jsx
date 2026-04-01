@@ -60,7 +60,7 @@ const MarketTooltip = ({ active, payload, label }) => {
    MARKET DATA
 ===================== */
 const MARKET_DATA = [
-  {label: 'Ardhana',    value: 62.48,  hargaAwal: '~$2200',  hargaAkhir: '~$6000' },
+  {label: 'Ardhana',    value: 56.05,  hargaAwal: '~$2200',  hargaAkhir: '~$6000' },
   { label: 'GOLD',      value: 35.23,  hargaAwal: '~$1,950',  hargaAkhir: '~$2,637' },
   { label: 'Crude Oil', value: 25.00,  hargaAwal: '~$80',     hargaAkhir: '~$100'   },
   { label: 'S&P 500',   value: -6.18,  hargaAwal: '6,501.86', hargaAkhir: '~6,100'  },
@@ -98,7 +98,7 @@ export const Performance = () => {
   const quarterlyData = [
     { title: 'Quarter I',   period: 'Aug – Oct 2025',      return: 29.4,  benchmark: 29.4,  outperformance: 0, status: 'done'        },
     { title: 'Quarter II',  period: 'Nov 2025 – Jan 2026', return: 6.79,  benchmark: 6.79,  outperformance: 0, status: 'done'        },
-    { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 17.58, benchmark: 17.58, outperformance: 0, status: 'ongoing'     },
+    { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 12.92, benchmark: 12.92, outperformance: 0, status: 'ongoing'     },
     { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 0,     benchmark: 0,     outperformance: 0, status: 'Not Started' },
     { title: 'Quarter V',   period: 'Aug – Oct 2026',      return: 0,     benchmark: 0,     outperformance: 0, status: 'Not Started' },
   ];
@@ -114,7 +114,7 @@ export const Performance = () => {
     ? [{ title: 'Start', return: 0, benchmark: 0 }, ...quarterlyData]
     : [{ year: 'Start', return: 0, benchmark: 0 }, ...yearlyData];
 
-  const totalReturn = '+62.48%';
+  const totalReturn = '+56.05%';
 
   const badgeStyle = (status) =>
     status === 'done'
