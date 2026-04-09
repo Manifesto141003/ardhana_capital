@@ -24,8 +24,8 @@ export const Home = () => {
 
       setCounts({
         aum: Math.floor(7 * progress),
-        clients: Math.floor(10 * progress),
-        return: (18.15 * progress).toFixed(1),
+        clients: Math.floor(15 * progress),
+        return: (18.89 * progress).toFixed(1),
         year: 2025,
       });
 
