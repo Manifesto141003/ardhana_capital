@@ -98,14 +98,14 @@ export const Performance = () => {
   const quarterlyData = [
     { title: 'Quarter I',   period: 'Aug – Oct 2025',      return: 29.4,  benchmark: 29.4,  outperformance: 0, status: 'done'        },
     { title: 'Quarter II',  period: 'Nov 2025 – Jan 2026', return: 6.79,  benchmark: 6.79,  outperformance: 0, status: 'done'        },
-    { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 19.17, benchmark: 19.17, outperformance: 0, status: 'ongoing'     },
+    { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 18.57, benchmark: 18.57, outperformance: 0, status: 'ongoing'     },
     { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 0,     benchmark: 0,     outperformance: 0, status: 'Not Started' },
     { title: 'Quarter V',   period: 'Aug – Oct 2026',      return: 0,     benchmark: 0,     outperformance: 0, status: 'Not Started' },
   ];
 
   const yearlyData = [
     { year: '2025', return: 26.09, benchmark: 26.09, status: 'done'    },
-    { year: '2026', return: 28.86, benchmark: 28.86, status: 'ongoing' },
+    { year: '2026', return: 29.95, benchmark: 29.95, status: 'ongoing' },
   ];
 
   const data = viewMode === 'quarterly' ? quarterlyData : yearlyData;
@@ -114,7 +114,7 @@ export const Performance = () => {
     ? [{ title: 'Start', return: 0, benchmark: 0 }, ...quarterlyData]
     : [{ year: 'Start', return: 0, benchmark: 0 }, ...yearlyData];
 
-  const totalReturn = '+56.05%';
+  const totalReturn = '+63.85%';
 
   const badgeStyle = (status) =>
     status === 'done'
