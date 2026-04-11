@@ -98,14 +98,14 @@ export const Performance = () => {
   const quarterlyData = [
     { title: 'Quarter I',   period: 'Aug – Oct 2025',      return: 29.4,  benchmark: 29.4,  outperformance: 0, status: 'done'        },
     { title: 'Quarter II',  period: 'Nov 2025 – Jan 2026', return: 6.79,  benchmark: 6.79,  outperformance: 0, status: 'done'        },
-    { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 18.57, benchmark: 18.57, outperformance: 0, status: 'ongoing'     },
+    { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 12.92, benchmark: 12.92, outperformance: 0, status: 'ongoing'     },
     { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 0,     benchmark: 0,     outperformance: 0, status: 'Not Started' },
     { title: 'Quarter V',   period: 'Aug – Oct 2026',      return: 0,     benchmark: 0,     outperformance: 0, status: 'Not Started' },
   ];
 
   const yearlyData = [
     { year: '2025', return: 26.09, benchmark: 26.09, status: 'done'    },
-    { year: '2026', return: 29.95, benchmark: 29.95, status: 'ongoing' },
+    { year: '2026', return: 28.86, benchmark: 28.86, status: 'ongoing' },
   ];
 
   const data = viewMode === 'quarterly' ? quarterlyData : yearlyData;
@@ -114,7 +114,7 @@ export const Performance = () => {
     ? [{ title: 'Start', return: 0, benchmark: 0 }, ...quarterlyData]
     : [{ year: 'Start', return: 0, benchmark: 0 }, ...yearlyData];
 
-  const totalReturn = '+63.85%';
+  const totalReturn = '+56.05%';
 
   const badgeStyle = (status) =>
     status === 'done'
@@ -366,6 +366,15 @@ export const Performance = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* PERIOD INDICATOR */}
+              <div className="mt-8 pt-6 border-t border-white/10 text-center">
+                <p className="text-sm text-white/50 mb-2">Periode Analisis</p>
+                <p className="text-2xl font-bold text-white">
+                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 31 Maret 2026
+                </p>
+                <p className="text-xs text-white/35 mt-2">Performa aset selama 8 bulan investasi</p>
               </div>
             </div>
           </motion.div>
