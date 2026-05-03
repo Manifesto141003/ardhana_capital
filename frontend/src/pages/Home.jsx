@@ -96,7 +96,7 @@ export const Home = () => {
             className="mt-6 text-lg text-white/60 max-w-3xl mx-auto"
           >
             Elite fund management powered by data intelligence and disciplined risk management.
-            We're educate, we're transparent, we're perform.
+            We educate, we're transparent, we perform.
           </motion.p>
 
           {/* CTA */}
