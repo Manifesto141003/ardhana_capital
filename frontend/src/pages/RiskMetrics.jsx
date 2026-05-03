@@ -7,7 +7,7 @@ export const RiskMetrics = () => {
     {
       icon: Target,
       title: 'Sharpe Ratio',
-      value: '1.96',
+      value: '1.35',
       description: 'Risk-adjusted return measure',
       color: 'text-primary',
     },
@@ -21,7 +21,7 @@ export const RiskMetrics = () => {
     {
       icon: Activity,
       title: 'Win Rate',
-      value: '42.48%',
+      value: '41.33%',
       description: 'Percentage of profitable quarters',
       color: 'text-success',
     },
