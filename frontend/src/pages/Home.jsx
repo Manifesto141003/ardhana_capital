@@ -53,7 +53,7 @@ export const Home = () => {
     },
     {
       value: counts.year,
-      label: 'Established',
+      label: 'Established Since Aug',
       color: 'text-[#E2C17B]',
     },
   ];
