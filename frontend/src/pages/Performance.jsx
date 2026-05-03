@@ -114,7 +114,7 @@ export const Performance = () => {
     ? [{ title: 'Start', return: 0, benchmark: 0 }, ...quarterlyData]
     : [{ year: 'Start', return: 0, benchmark: 0 }, ...yearlyData];
 
-  const totalReturn = '+56.05%';
+  const totalReturn = '+43.24%';
 
   const badgeStyle = (status) =>
     status === 'done'
