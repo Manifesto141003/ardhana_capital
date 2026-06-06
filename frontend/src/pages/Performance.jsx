@@ -67,7 +67,7 @@ const MARKET_DATA = [
   { label: 'BTC',       value: -30.78,  hargaAwal: '~$113.184', hargaAkhir: '~$78.468'},
   { label: 'JPM',       value: 7.99,  hargaAwal: '~$289.28',    hargaAkhir: '~$312.38'   },
   { label: 'BRK.B',     value: 9.49,  hargaAwal: '~$431.69',    hargaAkhir: '~$473.1'   },
-  { label: 'IHSG',      value: -7.71,  hargaAwal: '~7537.77',   hargaAkhir: '~6956.80'  },
+  { label: 'IHSG',      value: -24.99,  hargaAwal: '~7537.77',   hargaAkhir: '~5594.77'  },//Sudah Diupdate
   { label: 'BBCA',      value: -29.22, hargaAwal: '8275',    hargaAkhir: '5850'   },
   { label: 'NVDA',      value: 14.32, hargaAwal: '173.41',   hargaAkhir: '~$198.45'   },
 ];
@@ -98,14 +98,14 @@ export const Performance = () => {
   const quarterlyData = [
     { title: 'Quarter I',   period: 'Aug – Oct 2025',      return: 29.4,  benchmark: 29.4,  outperformance: 0, status: 'done'        },
     { title: 'Quarter II',  period: 'Nov 2025 – Jan 2026', return: 6.79,  benchmark: 6.79,  outperformance: 0, status: 'done'        },
-    { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 3.66, benchmark: 12.92, outperformance: 0, status: 'ongoing'     },
-    { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 0,     benchmark: 0,     outperformance: 0, status: 'Not Started' },
+    { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 3.66, benchmark: 12.92, outperformance: 0, status: 'done'     },
+    { title: 'Quarter IV',  period: 'May – Jul 2026',      return: -6.88,     benchmark: -6.88,     outperformance: 0, status: 'ongoing' },
     { title: 'Quarter V',   period: 'Aug – Oct 2026',      return: 0,     benchmark: 0,     outperformance: 0, status: 'Not Started' },
   ];
 
   const yearlyData = [
     { year: '2025', return: 26.09, benchmark: 26.09, status: 'done'    },
-    { year: '2026', return: 13.60, benchmark: 28.86, status: 'ongoing' },
+    { year: '2026', return: 1.50, benchmark: 28.86, status: 'ongoing' },
   ];
 
   const data = viewMode === 'quarterly' ? quarterlyData : yearlyData;
