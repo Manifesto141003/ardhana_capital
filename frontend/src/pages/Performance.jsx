@@ -67,8 +67,8 @@ const MarketTooltip = ({ active, payload, label }) => {
 ===================== */
 const MARKET_DATA = [
   {label: 'Ardhana',    value: 33.39,  hargaAwal: '~$2200',  hargaAkhir: '~$10892' },
-  { label: 'GOLD',      value: 40.49,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4614.64' },//Blm Diupdate
-  { label: 'Crude Oil', value: 53.50,  hargaAwal: '~$67.26',     hargaAkhir: '~$102.51'   },//Blm Diupdate
+  { label: 'GOLD',      value: 31.40,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4327.885' },//Blm Diupdate
+  { label: 'Crude Oil', value: 58.61,  hargaAwal: '~$67.26',     hargaAkhir: '~$89.09'   },//Blm Diupdate
   { label: 'S&P 500',   value: 18.37,  hargaAwal: '6285.21', hargaAkhir: '~7383.74'  },
   { label: 'BTC',       value: -48.33,  hargaAwal: '~$113.184', hargaAkhir: '~$59.768,68'},
   { label: 'JPM',       value: 7.95,  hargaAwal: '~$289.28',    hargaAkhir: '~$312.37'   },
@@ -378,9 +378,9 @@ export const Performance = () => {
               <div className="mt-8 pt-6 border-t border-white/10 text-center">
                 <p className="text-sm text-white/50 mb-2">Periode Analisis</p>
                 <p className="text-2xl font-bold text-white">
-                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 3 Mei 2026
+                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 6 Juli 2026
                 </p>
-                <p className="text-xs text-white/35 mt-2">Performa aset selama 9 bulan investasi</p>
+                <p className="text-xs text-white/35 mt-2">Performa aset selama 10 bulan investasi</p>
               </div>
             </div>
           </motion.div>
