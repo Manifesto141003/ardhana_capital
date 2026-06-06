@@ -15,6 +15,12 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
+const formatSignedPercent = (value, decimals = 2) => {
+  const numericValue = Number(value ?? 0);
+  const sign = numericValue > 0 ? '+' : numericValue < 0 ? '-' : '';
+  return `${sign}${Math.abs(numericValue).toFixed(decimals)}%`;
+};
+
 /* =====================
    TOOLTIP – Portfolio
 ===================== */
@@ -34,7 +40,7 @@ const CustomTooltip = ({ active, payload, label }) => {
       </div>
       <div className="flex justify-between mt-1">
         <span className="text-emerald-400">Return</span>
-        <span className="text-emerald-400 font-semibold">+{r}%</span>
+        <span className="text-emerald-400 font-semibold">{formatSignedPercent(r)}</span>
       </div>
     </div>
   );
@@ -50,7 +56,7 @@ const MarketTooltip = ({ active, payload, label }) => {
     <div className="bg-[#0B0F14] border border-white/10 rounded-lg px-4 py-3 text-sm shadow-xl">
       <p className="text-xs text-white/50 mb-2">{label}</p>
       <p className={`font-semibold ${v >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
-        {v >= 0 ? '+' : ''}{v?.toFixed(2)}%
+        {formatSignedPercent(v)}
       </p>
     </div>
   );
@@ -114,7 +120,7 @@ export const Performance = () => {
     ? [{ title: 'Start', return: 0, benchmark: 0 }, ...quarterlyData]
     : [{ year: 'Start', return: 0, benchmark: 0 }, ...yearlyData];
 
-  const totalReturn = '+43.24%';
+  const totalReturn = formatSignedPercent(43.24);
 
   const badgeStyle = (status) =>
     status === 'done'
@@ -212,11 +218,11 @@ export const Performance = () => {
                       <p className="text-sm text-white/50 mb-1">Return</p>
                       <div className={`flex items-center gap-2 text-3xl font-bold ${p.return >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
                         {p.return >= 0 ? <TrendingUp className="w-5 h-5" /> : <TrendingDown className="w-5 h-5" />}
-                        {p.return > 0 && '+'}{p.return}%
+                        {formatSignedPercent(p.return)}
                       </div>
 
                       <div className="mt-4 pt-3 border-t border-white/10 text-sm text-white/60">
-                        Benchmark: {p.benchmark > 0 && '+'}{p.benchmark}%
+                        Benchmark: {formatSignedPercent(p.benchmark)}
                       </div>
 
                       {p.outperformance !== undefined && (
@@ -329,7 +335,7 @@ export const Performance = () => {
                     <Tooltip content={<MarketTooltip />} cursor={{ fill: 'rgba(255,255,255,0.03)' }} />
                     <Bar dataKey="value" radius={[0, 4, 4, 0]} label={{
                       position: 'right',
-                      formatter: (v) => `${v >= 0 ? '+' : ''}${v.toFixed(2)}%`,
+                      formatter: (v) => formatSignedPercent(v),
                       fill: 'rgba(255,255,255,0.5)',
                       fontSize: 11,
                     }}>
@@ -358,7 +364,7 @@ export const Performance = () => {
                     <p
                       className={`text-xl font-bold ${asset.value >= 0 ? 'text-emerald-400' : 'text-red-400'}`}
                     >
-                      {asset.value >= 0 ? '+' : ''}{asset.value.toFixed(2)}%
+                      {formatSignedPercent(asset.value)}
                     </p>
                     <div className="mt-2 pt-2 border-t border-white/10 text-xs text-white/35 space-y-0.5">
                       <p>Awal: {asset.hargaAwal}</p>
