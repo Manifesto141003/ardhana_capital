@@ -120,7 +120,7 @@ export const Performance = () => {
     ? [{ title: 'Start', return: 0, benchmark: 0 }, ...quarterlyData]
     : [{ year: 'Start', return: 0, benchmark: 0 }, ...yearlyData];
 
-  const totalReturn = formatSignedPercent(43.24);
+  const totalReturn = formatSignedPercent(33.39);
 
   const badgeStyle = (status) =>
     status === 'done'
