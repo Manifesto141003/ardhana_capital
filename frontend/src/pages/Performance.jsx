@@ -66,7 +66,7 @@ const MarketTooltip = ({ active, payload, label }) => {
    MARKET DATA
 ===================== */
 const MARKET_DATA = [
-  {label: 'Ardhana',    value: 33.39,  hargaAwal: '~$2200',  hargaAkhir: '~$10892' },
+  {label: 'Ardhana',    value: 48.34,  hargaAwal: '~$2200',  hargaAkhir: '~$10892' },
   { label: 'GOLD',      value: 31.40,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4327.885' },//Blm Diupdate
   { label: 'Crude Oil', value: 58.61,  hargaAwal: '~$67.26',     hargaAkhir: '~$89.09'   },//Blm Diupdate
   { label: 'S&P 500',   value: 18.37,  hargaAwal: '6285.21', hargaAkhir: '~7383.74'  },
@@ -120,7 +120,7 @@ export const Performance = () => {
     ? [{ title: 'Start', return: 0, benchmark: 0 }, ...quarterlyData]
     : [{ year: 'Start', return: 0, benchmark: 0 }, ...yearlyData];
 
-  const totalReturn = formatSignedPercent(33.39);
+  const totalReturn = formatSignedPercent(48.34);
 
   const badgeStyle = (status) =>
     status === 'done'
