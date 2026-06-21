@@ -67,15 +67,16 @@ const MarketTooltip = ({ active, payload, label }) => {
 ===================== */
 const MARKET_DATA = [
   {label: 'Ardhana',    value: 48.34,  hargaAwal: '~$2200',  hargaAkhir: '~$10892' },
-  { label: 'GOLD',      value: 31.40,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4327.885' },//Blm Diupdate
-  { label: 'Crude Oil', value: 58.61,  hargaAwal: '~$67.26',     hargaAkhir: '~$89.09'   },//Blm Diupdate
-  { label: 'S&P 500',   value: 18.37,  hargaAwal: '6285.21', hargaAkhir: '~7383.74'  },
-  { label: 'BTC',       value: -48.33,  hargaAwal: '~$113.184', hargaAkhir: '~$59.768,68'},
-  { label: 'JPM',       value: 7.95,  hargaAwal: '~$289.28',    hargaAkhir: '~$312.37'   },
-  { label: 'BRK.B',     value: 3.23,  hargaAwal: '~$431.69',    hargaAkhir: '~$488.13'   },
-  { label: 'IHSG',      value: -24.99,  hargaAwal: '~7537.77',   hargaAkhir: '~5594.77'  },
-  { label: 'BBCA',      value: -38.86, hargaAwal: '8275',    hargaAkhir: '5075'   },
-  { label: 'NVDA',      value: 18.06, hargaAwal: '173.41',   hargaAkhir: '~205.10'   },
+  { label: 'GOLD',      value: 26.39,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4155.40' },//Blm Diupdate
+  { label: 'Crude Oil', value: 8.04,  hargaAwal: '~$67.26',     hargaAkhir: '~$72.6'   },//Blm Diupdate
+  { label: 'S&P 500',   value: 19.34,  hargaAwal: '6285.21', hargaAkhir: '~7500.57'  },
+  { label: 'BTC',       value: -48.33,  hargaAwal: '~$113.184', hargaAkhir: '~$63.544,68'},
+  { label: 'JPM',       value: 12.43,  hargaAwal: '~$289.28',    hargaAkhir: '~$325.22'   },
+  { label: 'BRK.B',     value: 13.39,  hargaAwal: '~$431.69',    hargaAkhir: '~$489.46'   },
+  { label: 'NVDA',      value: 21.49, hargaAwal: '173.41',   hargaAkhir: '~210.69'   },
+  { label: 'IHSG',      value: -18.05,  hargaAwal: '~7537.77',   hargaAkhir: '~6177.77'  },
+  { label: 'BBCA',      value: -23.87, hargaAwal: '8275',    hargaAkhir: '6300'   },
+  { label: 'Antam',      value: 40.35, hargaAwal: '1901K',    hargaAkhir: '2668K'   },
 ];
 
 /* =====================
