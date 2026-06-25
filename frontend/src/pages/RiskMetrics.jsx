@@ -7,8 +7,15 @@ export const RiskMetrics = () => {
     {
       icon: Target,
       title: 'Sharpe Ratio',
-      value: '1.35',
+      value: '1.27',
       description: 'Risk-adjusted return measure',
+      color: 'text-primary',
+    },
+    {
+      icon: TrendingDown,
+      title: 'Sortino Ratio',
+      value: '3.30',
+      description: 'Downside-risk-adjusted return measure',
       color: 'text-primary',
     },
     {
@@ -57,7 +64,7 @@ export const RiskMetrics = () => {
         </motion.div>
 
         {/* METRIC CARDS */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6 mb-16">
           {metrics.map((metric, index) => (
             <motion.div
               key={index}
