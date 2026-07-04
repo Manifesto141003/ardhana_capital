@@ -66,7 +66,7 @@ const MarketTooltip = ({ active, payload, label }) => {
    MARKET DATA
 ===================== */
 const MARKET_DATA = [
-  {label: 'Ardhana',    value: 48.34,  hargaAwal: '~$2200',  hargaAkhir: '~$10892' },
+  {label: 'Ardhana',    value: 67.80,  hargaAwal: '~$2200',  hargaAkhir: '~$13.568,54' },
   { label: 'GOLD',      value: 26.98,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4174.76' },//Blm Diupdate
   { label: 'Crude Oil', value: 2.24,  hargaAwal: '~$67.26',     hargaAkhir: '~$68.77'   },//Blm Diupdate
   { label: 'S&P 500',   value: 19.06,  hargaAwal: '6285.21', hargaAkhir: '~7483.24'  },
@@ -106,12 +106,12 @@ export const Performance = () => {
     { title: 'Quarter I',   period: 'Aug – Oct 2025',      return: 29.4,  benchmark: 29.4,  outperformance: 0, status: 'done'        },
     { title: 'Quarter II',  period: 'Nov 2025 – Jan 2026', return: 6.79,  benchmark: 6.79,  outperformance: 0, status: 'done'        },
     { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 3.66, benchmark: 3.66, outperformance: 0, status: 'done'     },
-    { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 3.56, benchmark: 3.56,     outperformance: 0, status: 'ongoing' },
+    { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 14.28, benchmark: 14.28,     outperformance: 0, status: 'ongoing' },
   ];
 
   const yearlyData = [
     { year: '2025', return: 26.09, benchmark: 26.09, status: 'done'    },
-    { year: '2026', return: 17.64, benchmark: 28.86, status: 'ongoing' },
+    { year: '2026', return: '29.83%', benchmark: '29.83%', status: 'ongoing' },
   ];
 
   const data = viewMode === 'quarterly' ? quarterlyData : yearlyData;
