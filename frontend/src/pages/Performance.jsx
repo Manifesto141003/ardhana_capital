@@ -67,16 +67,16 @@ const MarketTooltip = ({ active, payload, label }) => {
 ===================== */
 const MARKET_DATA = [
   {label: 'Ardhana',    value: 48.34,  hargaAwal: '~$2200',  hargaAkhir: '~$10892' },
-  { label: 'GOLD',      value: 26.39,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4155.40' },//Blm Diupdate
-  { label: 'Crude Oil', value: 8.04,  hargaAwal: '~$67.26',     hargaAkhir: '~$72.6'   },//Blm Diupdate
-  { label: 'S&P 500',   value: 19.34,  hargaAwal: '6285.21', hargaAkhir: '~7500.57'  },
-  { label: 'BTC',       value: -48.33,  hargaAwal: '~$113.184', hargaAkhir: '~$63.544,68'},
-  { label: 'JPM',       value: 12.43,  hargaAwal: '~$289.28',    hargaAkhir: '~$325.22'   },
-  { label: 'BRK.B',     value: 13.39,  hargaAwal: '~$431.69',    hargaAkhir: '~$489.46'   },
-  { label: 'NVDA',      value: 21.49, hargaAwal: '173.41',   hargaAkhir: '~210.69'   },
-  { label: 'IHSG',      value: -18.05,  hargaAwal: '~7537.77',   hargaAkhir: '~6177.77'  },
-  { label: 'BBCA',      value: -23.87, hargaAwal: '8275',    hargaAkhir: '6300'   },
-  { label: 'Antam',      value: 40.35, hargaAwal: '1901K',    hargaAkhir: '2668K'   },
+  { label: 'GOLD',      value: 26.98,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4174.76' },//Blm Diupdate
+  { label: 'Crude Oil', value: 2.24,  hargaAwal: '~$67.26',     hargaAkhir: '~$68.77'   },//Blm Diupdate
+  { label: 'S&P 500',   value: 19.06,  hargaAwal: '6285.21', hargaAkhir: '~7483.24'  },
+  { label: 'BTC',       value: -44.75,  hargaAwal: '~$113.184', hargaAkhir: '~$62531.54'},
+  { label: 'JPM',       value: 15.62,  hargaAwal: '~$289.28',    hargaAkhir: '~$334.47'   },
+  { label: 'BRK.B',     value: 17.63,  hargaAwal: '~$431.69',    hargaAkhir: '~$507.78'   },
+  { label: 'NVDA',      value: 12.35, hargaAwal: '173.41',   hargaAkhir: '~194.83'   },
+  { label: 'IHSG',      value: -22.05,  hargaAwal: '~7537.77',   hargaAkhir: '~5875.78'  },
+  { label: 'BBCA',      value: -26.89, hargaAwal: '8275',    hargaAkhir: '6,050'   },
+  { label: 'Antam',      value: 40.45, hargaAwal: '1901K',    hargaAkhir: '2670K'   },
 ];
 
 /* =====================
