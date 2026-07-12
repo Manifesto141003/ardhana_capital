@@ -106,12 +106,12 @@ export const Performance = () => {
     { title: 'Quarter I',   period: 'Aug – Oct 2025',      return: 29.4,  benchmark: 29.4,  outperformance: 0, status: 'done'        },
     { title: 'Quarter II',  period: 'Nov 2025 – Jan 2026', return: 6.79,  benchmark: 6.79,  outperformance: 0, status: 'done'        },
     { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 3.66, benchmark: 3.66, outperformance: 0, status: 'done'     },
-    { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 14.28, benchmark: 14.28,     outperformance: 0, status: 'ongoing' },
+    { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 10.08, benchmark: 10.08,     outperformance: 0, status: 'ongoing' },
   ];
 
   const yearlyData = [
     { year: '2025', return: 26.09, benchmark: 26.09, status: 'done'    },
-    { year: '2026', return: 29.83, benchmark: 29.83, status: 'ongoing' },
+    { year: '2026', return: 25.06, benchmark: 25.06, status: 'ongoing' },
   ];
 
   const data = viewMode === 'quarterly' ? quarterlyData : yearlyData;
@@ -378,7 +378,7 @@ export const Performance = () => {
               <div className="mt-8 pt-6 border-t border-white/10 text-center">
                 <p className="text-sm text-white/50 mb-2">Periode Analisis</p>
                 <p className="text-2xl font-bold text-white">
-                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 20 Juni 2026
+                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 5 Juli 2026
                 </p>
                 <p className="text-xs text-white/35 mt-2">Performa aset selama 10 bulan investasi</p>
               </div>

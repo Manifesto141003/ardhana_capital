@@ -22,6 +22,7 @@ export const Navigation = () => {
     { path: '/risk-metrics', label: 'Risk Metrics' },
     { path: '/education', label: 'Education' },
     { path: '/approach', label: 'Approach' },
+    { path: '/faq', label: 'FAQ' },
   ];
 
   return (
