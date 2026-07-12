@@ -26,6 +26,22 @@ const items = [
     answer:
       'We trade Forex (FX) pairs and commodities.',
   },
+  {
+    question: 'Where can I see the portfolio?',
+    answer: (
+      <span>
+        You can view the portfolio on MQL5 at{' '}
+        <a
+          href="https://www.mql5.com/en/search#!keyword=rooast77"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="text-[#A67D32] hover:underline"
+        >
+          https://www.mql5.com/en/search#!keyword=rooast77
+        </a>
+      </span>
+    ),
+  },
 ];
 
 export const FAQPerformanceMethodology = () => (
