@@ -144,7 +144,7 @@ export const FAQPerhitunganBunga = () => {
            masthead/eyebrow pill clears the fixed/sticky site navbar on this page.
            Adjust the 110px if your navbar's real rendered height differs
            (check DevTools > select navbar element > Computed > height, then add ~8-16px buffer). */
-        .faq-bunga-app{ --navy-deep:hsl(215 24% 10%); --navy-mid:hsl(215 22% 12%); --card-1:hsl(215 22% 11%); --card-2:hsl(215 19% 9%); --border-soft: rgba(255,255,255,0.08); --brand:#A67D32; --brand-soft: rgba(166,125,50,0.12); --brand-strong:#BFAA6B; --chart-orange:#C98A3E; --chart-orange-soft: rgba(201,138,62,0.14); --chart-green:#6FA98A; --text-hi:#FFFFFF; --text-lo: rgba(255,255,255,0.72); --text-faint: rgba(255,255,255,0.55); --font-display:'Lora', Georgia, serif; --font-mono:'IBM Plex Mono', 'Courier New', monospace; --font-sans:'Inter', -apple-system, sans-serif; background-color: #020617; background-image: radial-gradient(circle at 65% 5%, rgba(255,255,255,0.03), transparent 24%), radial-gradient(circle at 6% 20%, rgba(255,255,255,0.02), transparent 18%); min-height:100vh; padding: 110px 14px 60px; color: var(--text-hi); font-family: var(--font-sans); }
+        .faq-bunga-app{ --navy-deep:hsl(215 24% 10%); --navy-mid:hsl(215 22% 12%); --card-1:hsl(215 22% 11%); --card-2:hsl(215 19% 9%); --border-soft: rgba(255,255,255,0.08); --brand:#A67D32; --brand-soft: rgba(166,125,50,0.12); --brand-strong:#BFAA6B; --chart-orange:#C98A3E; --chart-orange-soft: rgba(201,138,62,0.14); --chart-green:#6FA98A; --neon:#FFD96A; --text-hi:#FFFFFF; --text-lo: rgba(255,255,255,0.72); --text-faint: rgba(255,255,255,0.55); --font-display:'Lora', Georgia, serif; --font-mono:'IBM Plex Mono', 'Courier New', monospace; --font-sans:'Inter', -apple-system, sans-serif; background-color: #020617; background-image: radial-gradient(circle at 65% 5%, rgba(255,255,255,0.03), transparent 24%), radial-gradient(circle at 6% 20%, rgba(255,255,255,0.02), transparent 18%); min-height:100vh; padding: 110px 14px 60px; color: var(--text-hi); font-family: var(--font-sans); }
         .faq-bunga-app *{ box-sizing:border-box; }
         .faq-bunga-app .page{ max-width: 980px; margin: 0 auto; }
         .faq-bunga-app .masthead{ display:flex; flex-direction:column; align-items:center; text-align:center; gap: 12px; padding: 6px 8px 28px; }
@@ -182,6 +182,17 @@ export const FAQPerhitunganBunga = () => {
         .faq-bunga-app .stamp.b .total{ color: var(--chart-green); }
         .faq-bunga-app .stamp .breakdown{ margin-top:12px; padding-top:12px; border-top: 1px solid var(--border-soft); font-family: var(--font-mono); font-size: 12px; color: var(--text-lo); line-height:1.8; }
         .faq-bunga-app .stamp .breakdown b{ color: var(--text-hi); }
+        /* Small + darker text: emphasize by bolding and switching to neon brand accent */
+        .faq-bunga-app .field .hint,
+        .faq-bunga-app details.assumptions,
+        .faq-bunga-app .legend,
+        .faq-bunga-app tbody td,
+        .faq-bunga-app .disclaimer,
+        .faq-bunga-app .stamp .tag{
+          color: var(--neon) !important;
+          font-weight: 700 !important;
+          -webkit-font-smoothing:antialiased;
+        }
         .faq-bunga-app .diff-note{ text-align:center; font-family: var(--font-sans); font-size: 13px; color: var(--text-lo); margin: -12px 0 28px; line-height:1.6; }
         .faq-bunga-app .diff-note b{ color: var(--brand); }
         .faq-bunga-app .chart-card{ margin-bottom: 30px; }
