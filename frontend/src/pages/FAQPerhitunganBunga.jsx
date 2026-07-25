@@ -140,68 +140,68 @@ export const FAQPerhitunganBunga = () => {
   return (
     <div className="faq-bunga-app">
       <style>{`
-        .faq-bunga-app{ --navy-deep:hsl(215 24% 10%); --navy-mid:hsl(215 22% 12%); --card-1:hsl(215 22% 11%); --card-2:hsl(215 19% 9%); --border-soft: rgba(255,255,255,0.08); --accent-1:hsl(var(--primary)); --accent-2:hsl(var(--secondary)); --accent-soft: hsla(var(--primary), 0.14); --accent-soft-2: hsla(var(--secondary), 0.14); --text-hi: var(--foreground); --text-lo: var(--muted-foreground); --text-faint: rgba(255,255,255,0.7); --font-display:'Lora', Georgia, serif; --font-mono:'IBM Plex Mono', 'Courier New', monospace; --font-sans:'Inter', -apple-system, sans-serif; background: var(--gradient-hero); min-height:100vh; padding: 32px 14px 60px; color: var(--text-hi); font-family: var(--font-sans); }
+        .faq-bunga-app{ --navy-deep:hsl(215 24% 10%); --navy-mid:hsl(215 22% 12%); --card-1:hsl(215 22% 11%); --card-2:hsl(215 19% 9%); --border-soft: rgba(255,255,255,0.08); --brand:#A67D32; --brand-soft: rgba(166,125,50,0.12); --brand-strong:#BFAA6B; --text-hi:#FFFFFF; --text-lo: rgba(255,255,255,0.72); --text-faint: rgba(255,255,255,0.55); --font-display:'Lora', Georgia, serif; --font-mono:'IBM Plex Mono', 'Courier New', monospace; --font-sans:'Inter', -apple-system, sans-serif; background-color: #020617; background-image: radial-gradient(circle at 65% 5%, rgba(255,255,255,0.03), transparent 24%), radial-gradient(circle at 6% 20%, rgba(255,255,255,0.02), transparent 18%); min-height:100vh; padding: 32px 14px 60px; color: var(--text-hi); font-family: var(--font-sans); }
         .faq-bunga-app *{ box-sizing:border-box; }
         .faq-bunga-app .page{ max-width: 980px; margin: 0 auto; }
         .faq-bunga-app .masthead{ display:flex; flex-direction:column; align-items:center; text-align:center; gap: 12px; padding: 6px 8px 28px; }
-        .faq-bunga-app .eyebrow-pill{ display:inline-flex; align-items:center; font-family: var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase; font-size: 10.5px; color: var(--accent-1); background: var(--accent-soft); border: 1px solid rgba(255,255,255,0.16); padding: 7px 16px; border-radius: 999px; }
+        .faq-bunga-app .eyebrow-pill{ display:inline-flex; align-items:center; font-family: var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase; font-size: 10.5px; color: var(--brand); background: var(--brand-soft); border: 1px solid rgba(255,255,255,0.16); padding: 7px 16px; border-radius: 999px; }
         .faq-bunga-app .masthead h1{ font-family: var(--font-display); font-weight: 700; font-size: clamp(24px, 4vw, 34px); margin: 0; letter-spacing: 0.01em; }
-        .faq-bunga-app .masthead h1 .grad{ background: linear-gradient(90deg, var(--accent-1), var(--text-hi)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .faq-bunga-app .masthead h1 .grad{ background: linear-gradient(90deg, var(--brand), var(--text-hi)); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .faq-bunga-app .masthead p{ font-size: 14px; color: var(--text-lo); margin: 0; max-width: 560px; line-height: 1.55; }
-        .faq-bunga-app .panel{ position: relative; background: var(--gradient-card); border: 1px solid var(--border-soft); border-radius: 18px; box-shadow: 0 30px 70px -34px rgba(0,0,0,0.7); padding: 32px 30px 14px; overflow: hidden; }
-        .faq-bunga-app .panel::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, var(--accent-1), var(--text-hi)); }
-        .faq-bunga-app .section-label{ font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent-1); margin: 0 0 14px; display:flex; align-items:center; gap:10px; }
+        .faq-bunga-app .panel{ position: relative; background: rgba(13,19,32,0.95); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; box-shadow: 0 30px 70px -34px rgba(0,0,0,0.7); padding: 32px 30px 14px; overflow: hidden; }
+        .faq-bunga-app .panel::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, var(--brand), var(--brand-strong)); }
+        .faq-bunga-app .section-label{ font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--brand); margin: 0 0 14px; display:flex; align-items:center; gap:10px; }
         .faq-bunga-app .section-label::after{ content:''; flex:1; height:1px; background: var(--border-soft); }
         .faq-bunga-app .inputs{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 16px 18px; margin-bottom: 10px; }
         @media (max-width: 720px){ .faq-bunga-app .inputs{ grid-template-columns: repeat(2,1fr); } }
         @media (max-width: 420px){ .faq-bunga-app .inputs{ grid-template-columns: 1fr; } }
         .faq-bunga-app .field label{ display:block; font-size: 12.5px; font-weight: 600; color: var(--text-lo); margin-bottom: 7px; }
-        .faq-bunga-app .field .input-wrap{ display:flex; align-items:center; background: rgba(255,255,255,0.045); border: 1px solid var(--border-soft); border-radius: 9px; padding: 10px 12px; transition: border-color .15s, box-shadow .15s; }
-        .faq-bunga-app .field .input-wrap:focus-within{ border-color: var(--accent-1); box-shadow: 0 0 0 3px hsla(var(--primary), 0.15); }
+        .faq-bunga-app .field .input-wrap{ display:flex; align-items:center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 9px; padding: 10px 12px; transition: border-color .15s, box-shadow .15s; }
+        .faq-bunga-app .field .input-wrap:focus-within{ border-color: var(--brand); box-shadow: 0 0 0 3px rgba(166,125,50,0.12); }
         .faq-bunga-app .field .prefix{ font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); margin-right: 6px; }
         .faq-bunga-app .field input{ border:none; outline:none; background:transparent; font-family: var(--font-mono); font-size: 14.5px; color: var(--text-hi); width: 100%; appearance: textfield; }
         .faq-bunga-app .field input::-webkit-outer-spin-button, .faq-bunga-app .field input::-webkit-inner-spin-button{ -webkit-appearance:none; appearance:none; margin:0; }
         .faq-bunga-app .field .hint{ font-size: 11px; color: var(--text-faint); margin-top: 6px; font-style: italic; }
         .faq-bunga-app details.assumptions{ margin: 16px 0 28px; font-size: 13px; color: var(--text-lo); background: rgba(255,255,255,0.03); border: 1px dashed var(--border-soft); border-radius: 10px; padding: 11px 15px; }
-        .faq-bunga-app details.assumptions summary{ cursor:pointer; font-weight:600; color: var(--accent-1); font-family: var(--font-sans); }
+        .faq-bunga-app details.assumptions summary{ cursor:pointer; font-weight:600; color: var(--brand); font-family: var(--font-sans); }
         .faq-bunga-app details.assumptions ul{ margin: 10px 0 4px; padding-left: 18px; line-height:1.65; }
         .faq-bunga-app details.assumptions code{ font-family: var(--font-mono); background: rgba(255,255,255,0.07); color: var(--text-hi); padding:1px 5px; border-radius:4px; }
         .faq-bunga-app .stamps{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 10px 0 26px; }
         @media (max-width:640px){ .faq-bunga-app .stamps{ grid-template-columns: 1fr; } }
-        .faq-bunga-app .stamp{ position:relative; border: 1px solid var(--border-soft); border-radius: 14px; padding: 18px 20px; background: linear-gradient(160deg, rgba(255,255,255,0.045), rgba(255,255,255,0.01)); }
+        .faq-bunga-app .stamp{ position:relative; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px 20px; background: rgba(255,255,255,0.02); }
         .faq-bunga-app .stamp .tag{ display:inline-block; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 12px; }
-        .faq-bunga-app .stamp.a .tag{ color: var(--accent-1); border:1px solid rgba(255,255,255,0.18); background: var(--accent-soft); }
-        .faq-bunga-app .stamp.b .tag{ color: var(--accent-2); border:1px solid rgba(255,255,255,0.18); background: var(--accent-soft-2); }
+        .faq-bunga-app .stamp.a .tag{ color: var(--brand); border:1px solid rgba(255,255,255,0.18); background: var(--brand-soft); }
+        .faq-bunga-app .stamp.b .tag{ color: var(--brand-strong); border:1px solid rgba(255,255,255,0.18); background: rgba(191,170,107,0.12); }
         .faq-bunga-app .stamp h3{ font-family: var(--font-display); margin: 0 0 10px; font-size: 16px; color: var(--text-hi); font-weight: 600; }
         .faq-bunga-app .stamp .total{ font-family: var(--font-mono); font-weight:600; font-size: clamp(20px, 3vw, 26px); }
-        .faq-bunga-app .stamp.a .total{ color: var(--accent-1); }
-        .faq-bunga-app .stamp.b .total{ color: var(--accent-2); }
+        .faq-bunga-app .stamp.a .total{ color: var(--brand); }
+        .faq-bunga-app .stamp.b .total{ color: var(--brand-strong); }
         .faq-bunga-app .stamp .breakdown{ margin-top:12px; padding-top:12px; border-top: 1px solid var(--border-soft); font-family: var(--font-mono); font-size: 12px; color: var(--text-lo); line-height:1.8; }
         .faq-bunga-app .stamp .breakdown b{ color: var(--text-hi); }
         .faq-bunga-app .diff-note{ text-align:center; font-family: var(--font-sans); font-size: 13px; color: var(--text-lo); margin: -12px 0 28px; line-height:1.6; }
-        .faq-bunga-app .diff-note b{ color: var(--accent-1); }
+        .faq-bunga-app .diff-note b{ color: var(--brand); }
         .faq-bunga-app .chart-card{ margin-bottom: 30px; }
         .faq-bunga-app .legend{ display:flex; gap:18px; font-size:12.5px; color: var(--text-lo); margin-bottom: 8px; font-family: var(--font-sans); }
         .faq-bunga-app .legend span{ display:flex; align-items:center; gap:6px; }
         .faq-bunga-app .legend i{ width:14px; height:3px; display:inline-block; border-radius:2px; }
-        .faq-bunga-app .legend .a i{ background: var(--accent-1); }
-        .faq-bunga-app .legend .b i{ background: var(--accent-2); }
+        .faq-bunga-app .legend .a i{ background: var(--brand); }
+        .faq-bunga-app .legend .b i{ background: var(--brand-strong); }
         .faq-bunga-app #chartWrap{ position:relative; }
-        .faq-bunga-app #tooltip{ position:absolute; pointer-events:none; background: hsl(215 20% 11%); color: var(--text-hi); font-family: var(--font-mono); font-size: 11.5px; padding: 8px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); line-height:1.6; box-shadow: 0 10px 24px rgba(0,0,0,0.4); opacity:0; transition: opacity .1s; white-space: nowrap; z-index:5; }
+        .faq-bunga-app #tooltip{ position:absolute; pointer-events:none; background: rgba(0,0,0,0.72); color: var(--text-hi); font-family: var(--font-mono); font-size: 11.5px; padding: 8px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); line-height:1.6; box-shadow: 0 10px 24px rgba(0,0,0,0.4); opacity:0; transition: opacity .1s; white-space: nowrap; z-index:5; }
         .faq-bunga-app .toolbar{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom: 14px; }
         .faq-bunga-app .tabs{ display:flex; gap: 8px; }
-        .faq-bunga-app .tabs button, .faq-bunga-app .view-toggle button{ font-family: var(--font-sans); font-weight:600; font-size: 12.5px; padding: 8px 15px; border-radius: 999px; border: 1px solid var(--border-soft); background: rgba(255,255,255,0.04); color: var(--text-lo); cursor:pointer; transition: all .12s; }
-        .faq-bunga-app .tabs button.active.a{ background: var(--accent-1); color: hsl(var(--primary-foreground)); border-color: var(--accent-1); }
-        .faq-bunga-app .tabs button.active.b{ background: var(--accent-2); color: hsl(var(--secondary-foreground)); border-color: var(--accent-2); }
+        .faq-bunga-app .tabs button, .faq-bunga-app .view-toggle button{ font-family: var(--font-sans); font-weight:600; font-size: 12.5px; padding: 8px 15px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04); color: var(--text-lo); cursor:pointer; transition: all .12s; }
+        .faq-bunga-app .tabs button.active.a{ background: var(--brand); color: #000; border-color: var(--brand); }
+        .faq-bunga-app .tabs button.active.b{ background: var(--brand-strong); color: #000; border-color: var(--brand-strong); }
         .faq-bunga-app .view-toggle{ margin-left:auto; display:flex; gap:6px; }
-        .faq-bunga-app .view-toggle button.active{ background: var(--accent-1); color: hsl(var(--primary-foreground)); border-color: var(--accent-1); }
-        .faq-bunga-app .table-wrap{ max-height: 380px; overflow:auto; border: 1px solid var(--border-soft); border-radius: 12px; background: rgba(255,255,255,0.04); margin-bottom: 10px; }
+        .faq-bunga-app .view-toggle button.active{ background: var(--brand); color: #000; border-color: var(--brand); }
+        .faq-bunga-app .table-wrap{ max-height: 380px; overflow:auto; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; background: rgba(255,255,255,0.025); margin-bottom: 10px; }
         .faq-bunga-app table{ width:100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 12.5px; }
         .faq-bunga-app thead th{ position:sticky; top:0; background: hsl(215 22% 11%); color: var(--text-hi); text-align:right; padding: 10px 12px; font-weight:600; font-size: 11px; letter-spacing:0.04em; text-transform:uppercase; }
         .faq-bunga-app thead th:first-child, .faq-bunga-app tbody td:first-child{ text-align:left; }
         .faq-bunga-app tbody td{ padding: 7px 12px; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-lo); }
         .faq-bunga-app tbody tr:nth-child(even){ background: rgba(255,255,255,0.02); }
-        .faq-bunga-app tfoot td{ padding: 10px 12px; text-align:right; font-weight:700; color: var(--text-hi); border-top: 2px solid var(--accent-1); background: var(--accent-soft); }
+        .faq-bunga-app tfoot td{ padding: 10px 12px; text-align:right; font-weight:700; color: var(--text-hi); border-top: 2px solid var(--brand); background: var(--brand-soft); }
         .faq-bunga-app .disclaimer{ font-size: 11.5px; color: var(--text-faint); text-align:center; padding: 18px 10px 26px; line-height:1.6; }
       `}</style>
 
@@ -299,13 +299,13 @@ export const FAQPerhitunganBunga = () => {
                     </text>
                   );
                 })}
-                <path d={pathA} fill="none" stroke="hsl(var(--primary))" strokeWidth="2.5" />
-                <path d={pathB} fill="none" stroke="hsl(var(--secondary))" strokeWidth="2.5" />
+                <path d={pathA} fill="none" stroke="var(--brand)" strokeWidth="2.5" />
+                <path d={pathB} fill="none" stroke="var(--brand-strong)" strokeWidth="2.5" />
                 {hoverState.visible && (
                   <>
                     <line x1={xAt(hoverState.index)} x2={xAt(hoverState.index)} y1={padT} y2={H - padB} stroke="rgba(255,255,255,0.35)" strokeWidth="1" strokeDasharray="3,3" />
-                    <circle cx={xAt(hoverState.index)} cy={yAt(rowsA[hoverState.index].saldo)} r="4" fill="hsl(var(--primary))" />
-                    <circle cx={xAt(hoverState.index)} cy={yAt(rowsB[hoverState.index].saldo)} r="4" fill="hsl(var(--secondary))" />
+                    <circle cx={xAt(hoverState.index)} cy={yAt(rowsA[hoverState.index].saldo)} r="4" fill="var(--brand)" />
+                    <circle cx={xAt(hoverState.index)} cy={yAt(rowsB[hoverState.index].saldo)} r="4" fill="var(--brand-strong)" />
                   </>
                 )}
                 <rect x={padL} y={padT} width={plotW} height={plotH} fill="transparent" onMouseMove={updateHover} onMouseLeave={hideHover} />
@@ -369,7 +369,7 @@ export const FAQPerhitunganBunga = () => {
 
           <p className="disclaimer">Alat ini hanya untuk simulasi dan edukasi, bukan nasihat keuangan. Hasil aktual dapat berbeda karena pajak, biaya administrasi, dan perubahan suku bunga. Selalu verifikasi ulang dengan pihak bank/lembaga keuangan terkait.</p>
           <div className="mt-6 text-center">
-            <Link to="/faq" className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/10">
+            <Link to="/faq" className="inline-flex items-center rounded-full border border-[#A67D32]/30 bg-[#A67D32] px-5 py-3 text-sm font-medium text-black transition hover:bg-[#BFAA6B]">
               Kembali ke FAQ overview
             </Link>
           </div>
