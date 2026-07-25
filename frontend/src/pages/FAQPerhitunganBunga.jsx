@@ -84,7 +84,7 @@ export const FAQPerhitunganBunga = () => {
   const diffPct = totalA > 0 ? (diff / totalA) * 100 : 0;
   const years = Math.floor(safePn / 12);
   const months = safePn % 12;
-  const nHint = `= ${years > 0 ? `${years} tahun ` : ''}${months > 0 ? `${months} bulan` : ''}`.trim();
+  const nHint = `= ${years > 0 ? `${years} year${years === 1 ? '' : 's'} ` : ''}${months > 0 ? `${months} month${months === 1 ? '' : 's'}` : ''}`.trim();
   const chartMax = niceMax(Math.max(totalA, totalB));
 
   const W = 800;
@@ -222,74 +222,74 @@ export const FAQPerhitunganBunga = () => {
 
       <div className="page">
         <div className="masthead">
-          <span className="eyebrow-pill">Simulasi · Bukan Nasihat Keuangan</span>
-          <h1>Simulasi Buku Tabungan <span className="grad">Digital</span></h1>
-          <p>Bandingkan hasil <b>deposit sekali di awal</b> vs <b>deposit rutin tiap bulan</b> dengan bunga majemuk. Isi angka di bawah — tabel dan grafik akan otomatis diperbarui.</p>
+          <span className="eyebrow-pill">Simulation · Not Financial Advice</span>
+          <h1>Digital Savings <span className="grad">Simulation</span></h1>
+          <p>Compare a <b>one-time opening deposit</b> against a <b>regular monthly deposit</b> using compound interest. Enter values below — the table and chart will update automatically.</p>
         </div>
 
         <div className="panel">
-          <div className="section-label">Data Simulasi</div>
+          <div className="section-label">Simulation Data</div>
           <div className="inputs">
             <div className="field">
-              <label htmlFor="p0">Modal Awal</label>
+              <label htmlFor="p0">Starting Balance</label>
               <div className="input-wrap"><span className="prefix">Rp</span><input id="p0" type="number" min="0" step="100000" value={p0} onChange={(e) => setP0(Math.max(0, Number(e.target.value) || 0))} /></div>
-              <div className="hint">Dipakai di kedua skenario</div>
+              <div className="hint">Used in both scenarios</div>
             </div>
             <div className="field">
-              <label htmlFor="pd">Setoran / Bulan</label>
+              <label htmlFor="pd">Monthly Deposit</label>
               <div className="input-wrap"><span className="prefix">Rp</span><input id="pd" type="number" min="0" step="100000" value={pd} onChange={(e) => setPd(Math.max(0, Number(e.target.value) || 0))} /></div>
-              <div className="hint">Hanya untuk skenario deposit bulanan</div>
+              <div className="hint">Only used in the monthly deposit scenario</div>
             </div>
             <div className="field">
-              <label htmlFor="pr">Bunga / Bulan</label>
+              <label htmlFor="pr">Monthly Interest</label>
               <div className="input-wrap"><input id="pr" type="number" min="0" step="0.05" value={pr} onChange={(e) => setPr(Math.max(0, Number(e.target.value) || 0))} /><span className="prefix">%</span></div>
-              <div className="hint">Silakan isi sesuai asumsi Anda</div>
+              <div className="hint">Enter the rate you expect</div>
             </div>
             <div className="field">
-              <label htmlFor="pn">Jangka Waktu</label>
-              <div className="input-wrap"><input id="pn" type="number" min="1" step="1" value={pn} onChange={(e) => setPn(Math.max(1, Math.min(600, Number(e.target.value) || 1)))} /><span className="prefix">bulan</span></div>
+              <label htmlFor="pn">Term Length</label>
+              <div className="input-wrap"><input id="pn" type="number" min="1" step="1" value={pn} onChange={(e) => setPn(Math.max(1, Math.min(600, Number(e.target.value) || 1)))} /><span className="prefix">months</span></div>
               <div className="hint">{nHint}</div>
             </div>
           </div>
 
           <details className="assumptions">
-            <summary>Lihat asumsi & rumus perhitungan</summary>
+            <summary>View assumptions & formulas</summary>
             <ul>
-              <li><b>Skenario A — Deposit Sekali:</b> hanya Modal Awal yang berkembang. Setiap bulan, saldo dikalikan <code>(1 + r)</code>. Rumus tertutup: <code>Saldo Akhir = Modal Awal × (1 + r)^n</code>.</li>
-              <li><b>Skenario B — Deposit Bulanan:</b> Modal Awal + setoran rutin tiap bulan. Asumsi setoran masuk di <u>awal bulan</u>, lalu bunga bulan itu dihitung dari saldo termasuk setoran tersebut (dikenal sebagai <i>annuity due</i>), baru digabung ke pokok bulan berikutnya.</li>
-              <li>Bunga dihitung sebagai bunga majemuk bulanan sederhana (bukan bunga harian), dan diasumsikan tetap (flat) sepanjang periode — belum memperhitungkan pajak bunga, biaya admin, atau perubahan suku bunga di dunia nyata.</li>
-              <li><code>r</code> = bunga per bulan (desimal), <code>n</code> = jumlah bulan.</li>
+              <li><b>Scenario A — One-time Deposit:</b> only the opening balance grows. Each month, the balance is multiplied by <code>(1 + r)</code>. Closed form: <code>Ending Balance = Starting Balance × (1 + r)^n</code>.</li>
+              <li><b>Scenario B — Monthly Deposit:</b> starting balance plus regular monthly contributions. Deposits are assumed to occur at the <u>beginning of the month</u>, then interest for that month is calculated on the balance including the new deposit (known as an <i>annuity due</i>), before compounding into the next month.</li>
+              <li>Interest is calculated as monthly compound interest (not daily), and is assumed constant throughout the period — excluding taxes, administrative fees, or real-world interest rate changes.</li>
+              <li><code>r</code> = monthly interest rate (decimal), <code>n</code> = number of months.</li>
             </ul>
           </details>
 
-          <div className="section-label">Ringkasan Hasil</div>
+          <div className="section-label">Results Summary</div>
           <div className="stamps">
             <div className="stamp a">
-              <div className="tag">Skenario A</div>
-              <h3>Deposit Sekali</h3>
+              <div className="tag">Scenario A</div>
+              <h3>One-time Deposit</h3>
               <div className="total">{rupiah(totalA)}</div>
               <div className="breakdown">
-                Modal awal: <b>{rupiah(p0)}</b><br />
-                Total bunga: <b>{rupiah(bungaA)}</b>
+                Starting balance: <b>{rupiah(p0)}</b><br />
+                Total interest: <b>{rupiah(bungaA)}</b>
               </div>
             </div>
             <div className="stamp b">
-              <div className="tag">Skenario B</div>
-              <h3>Deposit Tiap Bulan</h3>
+              <div className="tag">Scenario B</div>
+              <h3>Monthly Deposit</h3>
               <div className="total">{rupiah(totalB)}</div>
               <div className="breakdown">
-                Total setoran: <b>{rupiah(setoranB)}</b><br />
-                Total bunga: <b>{rupiah(bungaB)}</b>
+                Total deposits: <b>{rupiah(setoranB)}</b><br />
+                Total interest: <b>{rupiah(bungaB)}</b>
               </div>
             </div>
           </div>
-          <p className="diff-note">Setelah {safePn} bulan, Skenario B unggul <b>{rupiah(Math.abs(diff))}</b> {diff >= 0 ? 'lebih tinggi' : 'lebih rendah'} dibanding Skenario A ({diffPct.toFixed(1)}%) — karena setoran rutin menambah pokok yang ikut berbunga.</p>
+          <p className="diff-note">After {safePn} months, Scenario B is <b>{rupiah(Math.abs(diff))}</b> {diff >= 0 ? 'higher' : 'lower'} than Scenario A ({diffPct.toFixed(1)}%) — because regular deposits increase the principal that earns interest.</p>
 
-          <div className="section-label">Grafik Pertumbuhan Saldo</div>
+          <div className="section-label">Balance Growth Chart</div>
           <div className="chart-card">
             <div className="legend">
-              <span className="a"><i /> Deposit Sekali</span>
-              <span className="b"><i /> Deposit Bulanan</span>
+              <span className="a"><i /> One-time Deposit</span>
+              <span className="b"><i /> Monthly Deposit</span>
             </div>
             <div id="chartWrap" ref={wrapRef}>
               <svg id="chart" ref={svgRef} viewBox="0 0 800 340" width="100%" height="340">
@@ -326,30 +326,30 @@ export const FAQPerhitunganBunga = () => {
                 <rect x={padL} y={padT} width={plotW} height={plotH} fill="transparent" onMouseMove={updateHover} onMouseLeave={hideHover} />
               </svg>
               <div id="tooltip" style={{ left: hoverState.left, top: hoverState.top, opacity: hoverState.visible ? 1 : 0 }}>
-                <div dangerouslySetInnerHTML={{ __html: `Bulan ke-${hoverState.index}<br/>A: ${rupiah(rowsA[hoverState.index]?.saldo || 0)}<br/>B: ${rupiah(rowsB[hoverState.index]?.saldo || 0)}` }} />
+                <div dangerouslySetInnerHTML={{ __html: `Month ${hoverState.index}<br/>A: ${rupiah(rowsA[hoverState.index]?.saldo || 0)}<br/>B: ${rupiah(rowsB[hoverState.index]?.saldo || 0)}` }} />
               </div>
             </div>
           </div>
 
-          <div className="section-label">Rincian Bulanan</div>
+          <div className="section-label">Monthly Breakdown</div>
           <div className="toolbar">
             <div className="tabs">
-              <button type="button" id="tabA" className={`a${tab === 'A' ? ' active' : ''}`} onClick={() => setTab('A')}>Skenario A — Sekali</button>
-              <button type="button" id="tabB" className={`b${tab === 'B' ? ' active' : ''}`} onClick={() => setTab('B')}>Skenario B — Bulanan</button>
+              <button type="button" id="tabA" className={`a${tab === 'A' ? ' active' : ''}`} onClick={() => setTab('A')}>Scenario A — One-time</button>
+              <button type="button" id="tabB" className={`b${tab === 'B' ? ' active' : ''}`} onClick={() => setTab('B')}>Scenario B — Monthly</button>
             </div>
             <div className="view-toggle">
-              <button type="button" id="viewMonthly" className={view === 'monthly' ? 'active' : ''} onClick={() => setView('monthly')}>Bulanan</button>
-              <button type="button" id="viewYearly" className={view === 'yearly' ? 'active' : ''} onClick={() => setView('yearly')}>Tahunan</button>
+              <button type="button" id="viewMonthly" className={view === 'monthly' ? 'active' : ''} onClick={() => setView('monthly')}>Monthly</button>
+              <button type="button" id="viewYearly" className={view === 'yearly' ? 'active' : ''} onClick={() => setView('yearly')}>Yearly</button>
             </div>
           </div>
           <div className="table-wrap">
             <table id="tbl">
               <thead>
                 <tr id="tblHead">
-                  <th>{view === 'monthly' ? 'Bulan' : 'Tahun'}</th>
-                  <th>{view === 'monthly' ? 'Setoran' : 'Total Setoran'}</th>
-                  <th>{view === 'monthly' ? 'Bunga' : 'Total Bunga'}</th>
-                  <th>{view === 'monthly' ? 'Saldo Akhir' : 'Saldo Akhir Tahun'}</th>
+                  <th>{view === 'monthly' ? 'Month' : 'Year'}</th>
+                  <th>{view === 'monthly' ? 'Deposit' : 'Total Deposit'}</th>
+                  <th>{view === 'monthly' ? 'Interest' : 'Total Interest'}</th>
+                  <th>{view === 'monthly' ? 'Ending Balance' : 'Year-end Balance'}</th>
                 </tr>
               </thead>
               <tbody id="tblBody">
@@ -364,7 +364,7 @@ export const FAQPerhitunganBunga = () => {
                   ))
                   : toYearly(selectedRows, safePn).map((row) => (
                     <tr key={row.tahun}>
-                      <td>Th. {row.tahun}</td>
+                      <td>Year {row.tahun}</td>
                       <td>{rupiah(row.setoran)}</td>
                       <td>{rupiah(row.bunga)}</td>
                       <td>{rupiah(row.saldo)}</td>
