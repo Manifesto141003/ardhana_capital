@@ -148,7 +148,7 @@ export const FAQPerhitunganBunga = () => {
         .faq-bunga-app *{ box-sizing:border-box; }
         .faq-bunga-app .page{ max-width: 980px; margin: 0 auto; }
         .faq-bunga-app .masthead{ display:flex; flex-direction:column; align-items:center; text-align:center; gap: 12px; padding: 6px 8px 28px; }
-        .faq-bunga-app .eyebrow-pill{ display:inline-flex; align-items:center; font-family: var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase; font-size: 10.5px; color: var(--brand); background: var(--brand-soft); border: 1px solid rgba(255,255,255,0.16); padding: 7px 16px; border-radius: 999px; }
+        .faq-bunga-app .eyebrow-pill{ display:inline-flex; align-items:center; font-family: var(--font-mono); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; font-size: 10.5px; color: var(--brand); background: var(--brand-soft); border: 1px solid rgba(255,255,255,0.16); padding: 7px 16px; border-radius: 999px; }
         .faq-bunga-app .masthead h1{ font-family: var(--font-display); font-weight: 700; font-size: clamp(24px, 4vw, 34px); margin: 0; letter-spacing: 0.01em; }
         .faq-bunga-app .masthead h1 .grad{ background: linear-gradient(90deg, var(--brand), var(--text-hi)); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .faq-bunga-app .masthead p{ font-size: 14px; color: var(--text-lo); margin: 0; max-width: 560px; line-height: 1.55; }
@@ -323,7 +323,7 @@ export const FAQPerhitunganBunga = () => {
           <div className="section-label">Rincian Bulanan</div>
           <div className="toolbar">
             <div className="tabs">
-              <button type="button" id="tabA" className={`active a${tab === 'A' ? ' active' : ''}`} onClick={() => setTab('A')}>Skenario A — Sekali</button>
+              <button type="button" id="tabA" className={`a${tab === 'A' ? ' active' : ''}`} onClick={() => setTab('A')}>Skenario A — Sekali</button>
               <button type="button" id="tabB" className={`b${tab === 'B' ? ' active' : ''}`} onClick={() => setTab('B')}>Skenario B — Bulanan</button>
             </div>
             <div className="view-toggle">
