@@ -182,18 +182,17 @@ export const FAQPerhitunganBunga = () => {
         .faq-bunga-app .stamp.b .total{ color: var(--chart-green); }
         .faq-bunga-app .stamp .breakdown{ margin-top:12px; padding-top:12px; border-top: 1px solid var(--border-soft); font-family: var(--font-mono); font-size: 12px; color: var(--text-lo); line-height:1.8; }
         .faq-bunga-app .stamp .breakdown b{ color: var(--text-hi); }
-        /* Small + darker text: emphasize by bolding and switching to neon brand accent */
+        /* Small + darker text: emphasize by bolding and switching to soft neon on hints/tags */
         .faq-bunga-app .field .hint,
-        .faq-bunga-app details.assumptions,
-        .faq-bunga-app .legend,
-        .faq-bunga-app tbody td,
-        .faq-bunga-app .disclaimer,
+        .faq-bunga-app .legend span,
         .faq-bunga-app .stamp .tag{
           color: var(--neon) !important;
           font-weight: 700 !important;
-          text-shadow: 0 0 6px rgba(255, 217, 106, 0.25);
+          text-shadow: 0 0 6px rgba(255, 217, 106, 0.18);
           -webkit-font-smoothing:antialiased;
         }
+        .faq-bunga-app details.assumptions{ color: var(--text-lo); }
+        .faq-bunga-app .disclaimer{ color: var(--text-hi); font-weight: 600; }
         .faq-bunga-app .diff-note{ text-align:center; font-family: var(--font-sans); font-size: 13px; color: var(--text-lo); margin: -12px 0 28px; line-height:1.6; }
         .faq-bunga-app .diff-note b{ color: var(--brand); }
         .faq-bunga-app .chart-card{ margin-bottom: 30px; }
@@ -383,10 +382,10 @@ export const FAQPerhitunganBunga = () => {
             </table>
           </div>
 
-          <p className="disclaimer">Alat ini hanya untuk simulasi dan edukasi, bukan nasihat keuangan. Hasil aktual dapat berbeda karena pajak, biaya administrasi, dan perubahan suku bunga. Selalu verifikasi ulang dengan pihak bank/lembaga keuangan terkait.</p>
+          <p className="disclaimer">This tool is for simulation and educational purposes only, not financial advice. Actual results may vary due to taxes, administrative fees, and interest rate changes. Always verify with your bank or financial institution.</p>
           <div className="mt-6 text-center">
             <Link to="/faq" className="inline-flex items-center rounded-full border border-[#A67D32]/30 bg-[#A67D32] px-5 py-3 text-sm font-medium text-black transition hover:bg-[#BFAA6B]">
-              Kembali ke FAQ overview
+              Back to FAQ overview
             </Link>
           </div>
         </div>
