@@ -8,6 +8,11 @@ const categories = [
     path: '/faq/performance-methodology',
   },
   {
+    title: 'Perhitungan Bunga',
+    description: 'Simulasi bunga majemuk dan perbandingan deposit tunggal vs deposit bulanan.',
+    path: '/faq/perhitungan-bunga',
+  },
+  {
     title: 'Risk Management',
     description: 'Our risk controls, stop loss discipline, and how we manage downside exposure.',
     path: '/faq/risk-management',

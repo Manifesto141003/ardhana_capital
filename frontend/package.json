@@ -62,11 +62,13 @@
   "scripts": {
     "start": "craco start",
     "dev": "craco start",
+    "api": "node server.js",
     "build": "craco build",
     "test": "craco test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "proxy": "http://localhost:4000",
   "browserslist": {
     "production": [
       ">0.2%",
