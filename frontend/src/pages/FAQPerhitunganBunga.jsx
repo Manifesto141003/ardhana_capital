@@ -208,7 +208,7 @@ export const FAQPerhitunganBunga = () => {
       <div className="page">
         <div className="masthead">
           <span className="eyebrow-pill">Simulasi · Bukan Nasihat Keuangan</span>
-          <h1>Buku Tabungan <span className="grad">Digital</span></h1>
+          <h1>Simulasi Buku Tabungan <span className="grad">Digital</span></h1>
           <p>Bandingkan hasil <b>deposit sekali di awal</b> vs <b>deposit rutin tiap bulan</b> dengan bunga majemuk. Isi angka di bawah — tabel dan grafik akan otomatis diperbarui.</p>
         </div>
 
