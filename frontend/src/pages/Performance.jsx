@@ -381,7 +381,7 @@ export const Performance = () => {
                 <p className="text-2xl font-bold text-white">
                   1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 9 Agustus 2026
                 </p>
-                <p className="text-xs text-white/35 mt-2">Performa aset selama 12 bulan investasi</p>
+                <p className="text-xs text-white/35 mt-2">Performa aset selama 1 tahun investasi</p>
               </div>
             </div>
           </motion.div>
