@@ -121,6 +121,16 @@ export const Performance = () => {
     ? [{ title: 'Start', return: 0, benchmark: 0 }, ...quarterlyData]
     : [{ year: 'Start', return: 0, benchmark: 0 }, ...yearlyData];
 
+  const shortenQuarterLabel = (label) => {
+    switch (label) {
+      case 'Quarter II': return 'Q II';
+      case 'Quarter III': return 'Q III';
+      case 'Quarter IV': return 'Q IV';
+      case 'Quarter V': return 'Q V';
+      default: return label;
+    }
+  };
+
   const totalReturn = formatSignedPercent(63.36);
 
   const badgeStyle = (status) =>
@@ -253,7 +263,19 @@ export const Performance = () => {
                     <XAxis
                       dataKey={viewMode === 'quarterly' ? 'title' : 'year'}
                       padding={{ left: 0, right: 20 }}
-                      tickFormatter={(v) => (v === 'Start' ? '' : v)}
+                      tickFormatter={(v) =>
+                        viewMode === 'quarterly'
+                          ? shortenQuarterLabel(v)
+                          : v === 'Start'
+                            ? ''
+                            : v
+                      }
+                      tick={{
+                        fontSize: 13,
+                        fill: 'rgba(255,255,255,0.75)',
+                        fontWeight: 600,
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                      }}
                       stroke="rgba(255,255,255,0.5)"
                     />
                     <YAxis domain={[0, 'auto']} tickFormatter={(v) => `${v}%`} />
