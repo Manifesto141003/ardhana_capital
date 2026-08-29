@@ -62,7 +62,15 @@ export const Home = () => {
     <div className="min-h-screen pt-28 pb-24 bg-gradient-to-b from-[#162840] via-black to-black text-white">
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="container mx-auto px-6 text-center max-w-5xl">
+        {/* Background Logo */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+          <img 
+            src="/favicon.svg" 
+            alt="Ardhana Capital Logo" 
+            className="w-96 h-96 md:w-[600px] md:h-[600px] object-contain"
+          />
+        </div>
+        <div className="container mx-auto px-6 text-center max-w-5xl relative z-10">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
