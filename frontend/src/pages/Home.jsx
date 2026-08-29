@@ -63,7 +63,7 @@ export const Home = () => {
       {/* HERO */}
       <section className="relative overflow-hidden">
         {/* Background Logo */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.15]">
           <img 
             src="/ardhana-capital-bg.png" 
             alt="Ardhana Capital Logo" 
