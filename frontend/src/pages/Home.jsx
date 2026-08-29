@@ -63,9 +63,9 @@ export const Home = () => {
       {/* HERO */}
       <section className="relative overflow-hidden">
         {/* Background Logo */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
           <img 
-            src="/favicon.svg" 
+            src="/ardhana-capital-bg.png" 
             alt="Ardhana Capital Logo" 
             className="w-96 h-96 md:w-[600px] md:h-[600px] object-contain"
           />
