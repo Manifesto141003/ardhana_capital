@@ -66,17 +66,17 @@ const MarketTooltip = ({ active, payload, label }) => {
    MARKET DATA
 ===================== */
 const MARKET_DATA = [
-  {label: 'Ardhana',    value: 63.36,  hargaAwal: '~$2200',  hargaAkhir: '~$11.540,55' },
-{ label: 'GOLD',      value: 32.31,   hargaAwal: '~$3287.65',  hargaAkhir: '~$4350.00' },// Update 7 Agu 2026
-  { label: 'Crude Oil', value: 15.85,   hargaAwal: '~$67.26',    hargaAkhir: '~$77.92'   },// Update 7 Agu 2026, WTI
-  { label: 'S&P 500',   value: 23.43,   hargaAwal: '6285.21',    hargaAkhir: '7757.64'   },// Close 7 Agu 2026, rekor tertinggi
-  { label: 'BTC',       value: -42.63,  hargaAwal: '~$113,184',  hargaAkhir: '~$64,938.52'},// Close 7 Agu 2026
-  { label: 'JPM',       value: 23.74,   hargaAwal: '~$289.28',   hargaAkhir: '~$357.94'  },// Close 7 Agu 2026
-  { label: 'BRK.B',     value: 20.87,   hargaAwal: '~$431.69',   hargaAkhir: '~$521.80'  },// 7 Agu 2026
-  { label: 'NVDA',      value: 29.15,   hargaAwal: '173.41',     hargaAkhir: '223.96'    },// Close 7 Agu 2026
-  { label: 'IHSG',      value: -14.97,  hargaAwal: '~7537.77',   hargaAkhir: '~6409.65'  },// Close 7 Agu 2026
-  { label: 'BBCA',      value: -22.66,  hargaAwal: '8275',       hargaAkhir: '6,400'     },// 7 Agu 2026
-  { label: 'Antam',     value: 39.40,   hargaAwal: '1901K',      hargaAkhir: '2650K'     },// 7 Agu 2026, Rp2.650.000/gram
+  {label: 'Ardhana',    value: 43.97,  hargaAwal: '~$2200',  hargaAkhir: '~$19.776.85' },
+{ label: 'GOLD',      value: 35.48,   hargaAwal: '~$3287.65',  hargaAkhir: '~$4454.34' },// Update 7 Agu 2026
+  { label: 'Crude Oil', value: 24.07,   hargaAwal: '~$67.26',    hargaAkhir: '~$83.44'   },// Update 7 Agu 2026, WTI
+  { label: 'S&P 500',   value: 23.43,   hargaAwal: '6285.21',    hargaAkhir: '7711.64'   },// Close 7 Agu 2026, rekor tertinggi
+  { label: 'BTC',       value: -31.57,  hargaAwal: '~$113,184',  hargaAkhir: '~$77.441,18'},// Close 7 Agu 2026
+  { label: 'JPM',       value: 23.73,   hargaAwal: '~$289.28',   hargaAkhir: '~$357.61'  },// Close 7 Agu 2026
+  { label: 'BRK.B',     value: 16.97,   hargaAwal: '~$431.69',   hargaAkhir: '~$505.00'  },// 7 Agu 2026
+  { label: 'NVDA',      value: 25.48,   hargaAwal: '173.41',     hargaAkhir: '217,55'    },// Close 7 Agu 2026
+  { label: 'IHSG',      value: -13.53,  hargaAwal: '~7537.77',   hargaAkhir: '~6.518,12'  },// Close 7 Agu 2026
+  { label: 'BBCA',      value: -21.75,  hargaAwal: '8275',       hargaAkhir: '6,475'     },// 7 Agu 2026
+  { label: 'Antam',     value: 40.45,   hargaAwal: '1901K',      hargaAkhir: '2670K'     },// 7 Agu 2026, Rp2.650.000/gram
 ];
 
 /* =====================
@@ -107,12 +107,12 @@ export const Performance = () => {
     { title: 'Quarter II',  period: 'Nov 2025 – Jan 2026', return: 6.79,  benchmark: 6.79,  outperformance: 0, status: 'done'        },
     { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 3.66, benchmark: 3.66, outperformance: 0, status: 'done'     },
     { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 3.42, benchmark: 3.42,     outperformance: 0, status: 'done' },
-    { title: 'Quarter V',  period: 'Aug – Oct 2026',      return: 10.28, benchmark: 29.4,     outperformance: 0, status: 'ongoing' },
+    { title: 'Quarter V',  period: 'Aug – Oct 2026',      return: -2.81, benchmark: 29.4,     outperformance: 0, status: 'ongoing' },
   ];
 
   const yearlyData = [
     { year: '2025', return: 26.09, benchmark: 26.09, status: 'done'    },
-    { year: '2026', return: 29.55, benchmark: 29.55, status: 'ongoing' },
+    { year: '2026', return: 14.18, benchmark: 29.55, status: 'ongoing' },
   ];
 
   const data = viewMode === 'quarterly' ? quarterlyData : yearlyData;
@@ -401,9 +401,9 @@ export const Performance = () => {
               <div className="mt-8 pt-6 border-t border-white/10 text-center">
                 <p className="text-sm text-white/50 mb-2">Periode Analisis</p>
                 <p className="text-2xl font-bold text-white">
-                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 9 Agustus 2026
+                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 29 Agustus 2026
                 </p>
-                <p className="text-xs text-white/35 mt-2">Performa aset selama 1 tahun investasi</p>
+                <p className="text-xs text-white/35 mt-2">Performa aset selama 1 tahun 1 bulan investasi</p>
               </div>
             </div>
           </motion.div>
