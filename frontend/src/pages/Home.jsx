@@ -67,7 +67,7 @@ export const Home = () => {
           <img 
             src="/ardhana-capital-bg.png" 
             alt="Ardhana Capital Logo" 
-            className="w-96 h-96 md:w-[600px] md:h-[600px] object-contain"
+            className="w-64 h-64 md:w-[400px] md:h-[400px] object-contain"
           />
         </div>
         <div className="container mx-auto px-6 text-center max-w-5xl relative z-10">
