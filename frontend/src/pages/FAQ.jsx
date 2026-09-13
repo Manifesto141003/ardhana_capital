@@ -53,31 +53,31 @@ export const FAQ = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-3xl mx-auto pb-12"
         >
-          <span className="text-sm uppercase tracking-[0.3em] text-[#A67D32]/80">
+          <span className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#A67D32]/80">
             Frequently Asked Questions
           </span>
-          <h1 className="mt-6 text-4xl md:text-5xl font-bold text-white">
+          <h1 className="mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             FAQ Categories
           </h1>
-          <p className="mt-4 text-base text-white/70">
+          <p className="mt-4 text-sm sm:text-base text-white/70">
             Select a topic to view the full set of frequently asked questions for that category.
           </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
           {categories.map((category, index) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
-              className="rounded-3xl border border-white/10 bg-[#0D1320]/80 p-8 shadow-xl shadow-[#020617]/20"
+              className="rounded-2xl sm:rounded-3xl border border-white/10 bg-[#0D1320]/80 p-6 sm:p-8 shadow-xl shadow-[#020617]/20"
             >
-              <h2 className="text-2xl font-semibold text-white">{category.title}</h2>
-              <p className="mt-4 text-sm leading-7 text-white/70">{category.description}</p>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">{category.title}</h2>
+              <p className="mt-4 text-xs sm:text-sm leading-6 sm:leading-7 text-white/70">{category.description}</p>
               <Link
                 to={category.path}
-                className="mt-6 inline-flex items-center rounded-full bg-[#A67D32] px-5 py-3 text-sm font-semibold text-black transition hover:bg-[#BFAA6B]"
+                className="mt-6 inline-flex items-center rounded-full bg-[#A67D32] px-4 sm:px-5 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-black transition hover:bg-[#BFAA6B]"
               >
                 Explore {category.title}
               </Link>

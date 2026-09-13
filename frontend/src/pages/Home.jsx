@@ -88,7 +88,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-8 text-5xl md:text-6xl font-bold leading-tight"
+            className="mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
           >
             Ardhana <br />
             <span className="bg-gradient-to-r from-[#BFAA6B] via-[#A67D32] to-[#8C693E] bg-clip-text text-transparent">
@@ -170,7 +170,7 @@ export const Home = () => {
       <section className="pt-28">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Why Choose{' '}
               <span className="bg-gradient-to-r from-[#BFAA6B] via-[#A67D32] to-[#8C693E] bg-clip-text text-transparent">
                 Ardhana Capital

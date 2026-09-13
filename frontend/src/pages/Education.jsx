@@ -39,14 +39,14 @@ export const Education = () => {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-5xl mx-auto text-center mb-14"
         >
-          <h1 className="text-5xl font-bold mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Client{' '}
             <span className="bg-gradient-to-r from-[#E2C17B] via-[#B88A3B] to-[#8C693E] bg-clip-text text-transparent">
               Education
             </span>
           </h1>
 
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-2xl mx-auto">
             We believe informed clients make better investment partners. Understanding our approach is
             key to long-term success.
           </p>

@@ -156,7 +156,7 @@ export const Performance = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-14"
         >
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Portfolio{' '}
             <span className="bg-gradient-to-r from-[#E2C17B] via-[#B88A3B] to-[#8C693E] bg-clip-text text-transparent">
               Performance

@@ -39,13 +39,13 @@ export const Approach = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-14"
         >
-          <h1 className="text-5xl font-bold mb-4 text-white">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
             Our{' '}
             <span className="bg-gradient-to-r from-[#E2C17B] via-[#B88A3B] to-[#8C693E] bg-clip-text text-transparent">
               Approach
             </span>
           </h1>
-          <p className="text-white/60 text-lg">
+          <p className="text-white/60 text-sm sm:text-base md:text-lg">
             Four core principles guide every decision we make at Ardhana Capital.
           </p>
         </motion.div>
@@ -62,15 +62,15 @@ export const Approach = () => {
             >
               <div className="mb-5">
                 <div className="w-12 h-12 rounded-lg bg-[#B88A3B]/15 flex items-center justify-center">
-                  <principle.icon className="w-6 h-6 text-[#B88A3B]" />
+                  <principle.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#B88A3B]" />
                 </div>
               </div>
 
-              <h3 className="text-xl font-semibold mb-3 text-white">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-white">
                 {principle.title}
               </h3>
 
-              <p className="text-white/60 leading-relaxed">
+              <p className="text-sm sm:text-base text-white/60 leading-relaxed">
                 {principle.description}
               </p>
             </motion.div>
@@ -82,9 +82,9 @@ export const Approach = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="rounded-2xl bg-[#0B0F14] border border-[#1B2A3F] p-10"
+          className="rounded-2xl bg-[#0B0F14] border border-[#1B2A3F] p-6 sm:p-8 md:p-10"
         >
-          <h3 className="text-3xl font-bold mb-10 text-white text-center">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-10 text-white text-center">
             Investment Process
           </h3>
 

@@ -30,9 +30,9 @@ export const LiveTrade = () => {
   return (
     <div className="min-h-screen pt-28 pb-24 bg-[#080b10] text-white">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto rounded-3xl border border-white/10 bg-[#0b1220]/90 p-8 shadow-2xl shadow-black/30">
-          <h1 className="text-4xl font-bold mb-4">Live Trade Data</h1>
-          <p className="text-sm text-white/60 mb-8">
+        <div className="max-w-4xl mx-auto rounded-2xl sm:rounded-3xl border border-white/10 bg-[#0b1220]/90 p-6 sm:p-8 shadow-2xl shadow-black/30">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Live Trade Data</h1>
+          <p className="text-xs sm:text-sm text-white/60 mb-8">
             This route is intentionally hidden. Access it directly at <span className="font-semibold">/performance/livetrade</span>.
           </p>
 

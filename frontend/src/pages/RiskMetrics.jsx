@@ -7,14 +7,14 @@ export const RiskMetrics = () => {
     {
       icon: Target,
       title: 'Sharpe Ratio',
-      value: '1.27',
+      value: '1.46',
       description: 'Risk-adjusted return measure',
       color: 'text-primary',
     },
     {
       icon: TrendingDown,
       title: 'Sortino Ratio',
-      value: '3.30',
+      value: '4.31',
       description: 'Downside-risk-adjusted return measure',
       color: 'text-primary',
     },
@@ -51,14 +51,14 @@ export const RiskMetrics = () => {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-5xl mx-auto text-center mb-14"
         >
-          <h1 className="text-5xl font-bold mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Risk{' '}
             <span className="bg-gradient-to-r from-[#E2C17B] via-[#B88A3B] to-[#8C693E] bg-clip-text text-transparent">
               Metrics
             </span>
           </h1>
 
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-2xl mx-auto">
             Data-driven risk management ensures capital preservation while capturing opportunities.
           </p>
         </motion.div>
@@ -99,18 +99,18 @@ export const RiskMetrics = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="rounded-2xl bg-[#0B0F14] border border-[#1B2A3F] p-8"
+          className="rounded-2xl bg-[#0B0F14] border border-[#1B2A3F] p-6 sm:p-8"
         >
-          <h3 className="text-2xl font-bold text-white mb-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">
             Risk Management Philosophy
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="text-lg font-semibold mb-3 text-[#E2C17B]">
+              <h4 className="text-base sm:text-lg font-semibold mb-3 text-[#E2C17B]">
                 Quantitative Analysis
               </h4>
-              <p className="text-white/60 leading-relaxed">
+              <p className="text-sm sm:text-base text-white/60 leading-relaxed">
                 We employ sophisticated statistical models to measure, monitor, and manage risk across
                 all portfolio positions. Our systematic approach ensures consistent application of risk
                 parameters.
