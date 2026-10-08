@@ -66,7 +66,7 @@ const MarketTooltip = ({ active, payload, label }) => {
    MARKET DATA
 ===================== */
 const MARKET_DATA = [
-  { label: 'Ardhana',   value: 43.97,  hargaAwal: '~$2200',     hargaAkhir: '~$19.776.85' }, // belum diupdate, lihat catatan
+  { label: 'Ardhana',   value: 75.61,  hargaAwal: '~$2200',     hargaAkhir: '~$19.776.85' }, // belum diupdate, lihat catatan
   { label: 'GOLD',      value: 33.81,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4399.10'   }, // LBMA PM fix 8 Sep 2026
   { label: 'Crude Oil', value: 38.31,  hargaAwal: '~$67.26',    hargaAkhir: '~$93.03'     }, // Close 8 Sep 2026, WTI
   { label: 'S&P 500',   value: 22.09,  hargaAwal: '6285.21',    hargaAkhir: '7673.52'     }, // Close 8 Sep 2026
