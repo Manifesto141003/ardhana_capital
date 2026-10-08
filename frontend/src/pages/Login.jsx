@@ -15,6 +15,11 @@ export const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    if (!supabase) {
+      toast.error('Login is unavailable because Supabase is not configured.');
+      return;
+    }
+
     if (isForgotPassword) {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/login`,
@@ -76,6 +81,11 @@ export const Login = () => {
                 ? 'Enter your email and we will send you a secure reset link.'
                 : 'Sign in to continue to your Ardhana Capital account.'}
             </p>
+            {!supabase && (
+              <p role="alert" className="mt-4 text-sm text-amber-300">
+                Login is temporarily unavailable because Supabase is not configured.
+              </p>
+            )}
           </div>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-5">
