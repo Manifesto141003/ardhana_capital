@@ -69,47 +69,47 @@ export const LiveTradeHistory = () => {
 
           {status === 'loaded' && history.length > 0 && (
             <div className="space-y-6">
-              <div className="overflow-x-auto rounded-3xl border border-white/10 bg-white/5 p-4">
-                <table className="min-w-full text-left text-sm text-white/80 whitespace-nowrap">
+              <div className="overflow-x-auto rounded-3xl border border-white/10 bg-white/5 p-3">
+                <table className="min-w-full text-left text-xs text-white/80 whitespace-nowrap">
                   <thead>
                     <tr className="border-b border-white/10 text-white/70">
-                      <th className="px-4 py-3">Order</th>
-                      <th className="px-4 py-3">Time</th>
-                      <th className="px-4 py-3">Type</th>
-                      <th className="px-4 py-3">Size</th>
-                      <th className="px-4 py-3">Symbol</th>
-                      <th className="px-4 py-3">Price</th>
-                      <th className="px-4 py-3">S/L</th>
-                      <th className="px-4 py-3">T/P</th>
-                      <th className="px-4 py-3">Time</th>
-                      <th className="px-4 py-3">Price</th>
-                      <th className="px-4 py-3">Commission</th>
-                      <th className="px-4 py-3">Taxes</th>
-                      <th className="px-4 py-3">Swap</th>
-                      <th className="px-4 py-3">Profit</th>
+                      <th className="px-2.5 py-2">Order</th>
+                      <th className="px-2.5 py-2">Time</th>
+                      <th className="px-2.5 py-2">Type</th>
+                      <th className="px-2.5 py-2">Size</th>
+                      <th className="px-2.5 py-2">Symbol</th>
+                      <th className="px-2.5 py-2">Price</th>
+                      <th className="px-2.5 py-2">S/L</th>
+                      <th className="px-2.5 py-2">T/P</th>
+                      <th className="px-2.5 py-2">Time</th>
+                      <th className="px-2.5 py-2">Price</th>
+                      <th className="px-2.5 py-2">Commission</th>
+                      <th className="px-2.5 py-2">Taxes</th>
+                      <th className="px-2.5 py-2">Swap</th>
+                      <th className="px-2.5 py-2">Profit</th>
                     </tr>
                   </thead>
                   <tbody>
                     {history.map((trade) => (
                       <tr key={trade.ticket} className="border-b border-white/10">
-                        <td className="px-4 py-3 font-medium text-white">{trade.ticket}</td>
-                        <td className="px-4 py-3">{formatTime(trade.openTime)}</td>
-                        <td className="px-4 py-3 capitalize">{trade.type || 'unknown'}</td>
-                        <td className="px-4 py-3">{formatNumber(trade.volume)}</td>
-                        <td className="px-4 py-3 uppercase">{trade.symbol}</td>
-                        <td className="px-4 py-3">{formatNumber(trade.openPrice, 4)}</td>
-                        <td className="px-4 py-3">
+                        <td className="px-2.5 py-2 font-medium text-white">{trade.ticket}</td>
+                        <td className="px-2.5 py-2">{formatTime(trade.openTime)}</td>
+                        <td className="px-2.5 py-2 capitalize">{trade.type || 'unknown'}</td>
+                        <td className="px-2.5 py-2">{formatNumber(trade.volume)}</td>
+                        <td className="px-2.5 py-2 uppercase">{trade.symbol}</td>
+                        <td className="px-2.5 py-2">{formatNumber(trade.openPrice, 4)}</td>
+                        <td className="px-2.5 py-2">
                           {trade.stopLoss ? formatNumber(trade.stopLoss, 4) : '—'}
                         </td>
-                        <td className="px-4 py-3">
+                        <td className="px-2.5 py-2">
                           {trade.takeProfit ? formatNumber(trade.takeProfit, 4) : '—'}
                         </td>
-                        <td className="px-4 py-3">{formatTime(trade.closeTime)}</td>
-                        <td className="px-4 py-3">{formatNumber(trade.closePrice, 4)}</td>
-                        <td className="px-4 py-3">{formatNumber(trade.commission)}</td>
-                        <td className="px-4 py-3">{formatNumber(trade.taxes ?? 0)}</td>
-                        <td className="px-4 py-3">{formatNumber(trade.swap)}</td>
-                        <td className={`px-4 py-3 font-semibold ${trade.profit >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                        <td className="px-2.5 py-2">{formatTime(trade.closeTime)}</td>
+                        <td className="px-2.5 py-2">{formatNumber(trade.closePrice, 4)}</td>
+                        <td className="px-2.5 py-2">{formatNumber(trade.commission)}</td>
+                        <td className="px-2.5 py-2">{formatNumber(trade.taxes ?? 0)}</td>
+                        <td className="px-2.5 py-2">{formatNumber(trade.swap)}</td>
+                        <td className={`px-2.5 py-2 font-semibold ${trade.profit >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
                           {formatNumber(trade.profit)}
                         </td>
                       </tr>

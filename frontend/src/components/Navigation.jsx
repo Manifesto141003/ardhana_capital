@@ -23,6 +23,7 @@ export const Navigation = () => {
     { path: '/education', label: 'Education' },
     { path: '/approach', label: 'Approach' },
     { path: '/faq', label: 'FAQ' },
+    { path: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -59,9 +60,9 @@ export const Navigation = () => {
           </div>
 
           <div className="hidden md:block">
-            <Link to="/contact">
+            <Link to="/login">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
-                Contact
+                Login
               </Button>
             </Link>
           </div>
@@ -101,12 +102,12 @@ export const Navigation = () => {
                 </Button>
               </Link>
             ))}
-            <Link to="/contact">
+            <Link to="/login">
               <Button
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact Us
+                Login
               </Button>
             </Link>
 

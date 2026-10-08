@@ -18,6 +18,7 @@ import { FAQOnboardingGeneral } from './pages/FAQOnboardingGeneral';
 import { LiveTrade } from './pages/LiveTrade';
 import { LiveTradeHistory } from './pages/LiveTradeHistory';
 import { Contact } from './pages/Contact';
+import { Login } from './pages/Login';
 import './App.css';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/faq/legal-structure" element={<FAQLegalStructure />} />
           <Route path="/faq/onboarding-general" element={<FAQOnboardingGeneral />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Toaster position="top-right" richColors />
       </BrowserRouter>
