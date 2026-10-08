@@ -66,17 +66,17 @@ const MarketTooltip = ({ active, payload, label }) => {
    MARKET DATA
 ===================== */
 const MARKET_DATA = [
-  {label: 'Ardhana',    value: 43.97,  hargaAwal: '~$2200',  hargaAkhir: '~$19.776.85' },
-{ label: 'GOLD',      value: 35.48,   hargaAwal: '~$3287.65',  hargaAkhir: '~$4454.34' },// Update 7 Agu 2026
-  { label: 'Crude Oil', value: 24.07,   hargaAwal: '~$67.26',    hargaAkhir: '~$83.44'   },// Update 7 Agu 2026, WTI
-  { label: 'S&P 500',   value: 23.43,   hargaAwal: '6285.21',    hargaAkhir: '7711.64'   },// Close 7 Agu 2026, rekor tertinggi
-  { label: 'BTC',       value: -31.57,  hargaAwal: '~$113,184',  hargaAkhir: '~$77.441,18'},// Close 7 Agu 2026
-  { label: 'JPM',       value: 23.73,   hargaAwal: '~$289.28',   hargaAkhir: '~$357.61'  },// Close 7 Agu 2026
-  { label: 'BRK.B',     value: 16.97,   hargaAwal: '~$431.69',   hargaAkhir: '~$505.00'  },// 7 Agu 2026
-  { label: 'NVDA',      value: 25.48,   hargaAwal: '173.41',     hargaAkhir: '217,55'    },// Close 7 Agu 2026
-  { label: 'IHSG',      value: -13.53,  hargaAwal: '~7537.77',   hargaAkhir: '~6.518,12'  },// Close 7 Agu 2026
-  { label: 'BBCA',      value: -21.75,  hargaAwal: '8275',       hargaAkhir: '6,475'     },// 7 Agu 2026
-  { label: 'Antam',     value: 40.45,   hargaAwal: '1901K',      hargaAkhir: '2670K'     },// 7 Agu 2026, Rp2.650.000/gram
+  { label: 'Ardhana',   value: 43.97,  hargaAwal: '~$2200',     hargaAkhir: '~$19.776.85' }, // belum diupdate, lihat catatan
+  { label: 'GOLD',      value: 33.81,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4399.10'   }, // LBMA PM fix 8 Sep 2026
+  { label: 'Crude Oil', value: 38.31,  hargaAwal: '~$67.26',    hargaAkhir: '~$93.03'     }, // Close 8 Sep 2026, WTI
+  { label: 'S&P 500',   value: 22.09,  hargaAwal: '6285.21',    hargaAkhir: '7673.52'     }, // Close 8 Sep 2026
+  { label: 'BTC',       value: -30.66, hargaAwal: '~$113,184',  hargaAkhir: '~$78.478,41' }, // Close 8 Sep 2026
+  { label: 'JPM',       value: 22.20,  hargaAwal: '~$289.28',   hargaAkhir: '~$353.51'    }, // Close 8 Sep 2026
+  { label: 'BRK.B',     value: 17.17,  hargaAwal: '~$431.69',   hargaAkhir: '~$505.83'    }, // Close 8 Sep 2026
+  { label: 'NVDA',      value: 30.17,  hargaAwal: '173.41',     hargaAkhir: '225,73'      }, // Close 8 Sep 2026
+  { label: 'IHSG',      value: -11.29, hargaAwal: '~7537.77',   hargaAkhir: '~6.686,44'   }, // Close 8 Sep 2026
+  { label: 'BBCA',      value: -19.34, hargaAwal: '8275',       hargaAkhir: '6,675'       }, // Close 8 Sep 2026
+  { label: 'Antam',     value: 38.19,  hargaAwal: '1901K',      hargaAkhir: '2627K'       }, // 8 Sep 2026, Logam Mulia Rp2.627.000/gram
 ];
 
 /* =====================
@@ -401,7 +401,7 @@ export const Performance = () => {
               <div className="mt-8 pt-6 border-t border-white/10 text-center">
                 <p className="text-sm text-white/50 mb-2">Periode Analisis</p>
                 <p className="text-2xl font-bold text-white">
-                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 29 Agustus 2026
+                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 8 September 2026
                 </p>
                 <p className="text-xs text-white/35 mt-2">Performa aset selama 1 tahun 1 bulan investasi</p>
               </div>
