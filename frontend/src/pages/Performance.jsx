@@ -112,7 +112,7 @@ export const Performance = () => {
 
   const yearlyData = [
     { year: '2025', return: 26.09, benchmark: 26.09, status: 'done'    },
-    { year: '2026', return: 14.18, benchmark: 39.27, status: 'ongoing' },
+    { year: '2026', return: 39.27, benchmark: 39.27, status: 'ongoing' },
   ];
 
   const data = viewMode === 'quarterly' ? quarterlyData : yearlyData;
