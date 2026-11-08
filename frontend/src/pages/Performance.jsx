@@ -67,16 +67,16 @@ const MarketTooltip = ({ active, payload, label }) => {
 ===================== */
 const MARKET_DATA = [
   { label: 'Ardhana',   value: 26.93,  hargaAwal: '~$2200',     hargaAkhir: '~$22077.6' }, // belum diupdate, lihat catatan
-  { label: 'GOLD',      value: 17.87,  hargaAwal: '~$3287.65',  hargaAkhir: '~$3875.19'   }, // LBMA PM fix 8 Sep 2026
-  { label: 'Crude Oil', value: 47.74,  hargaAwal: '~$67.26',    hargaAkhir: '~$99.37'     }, // Close 8 Sep 2026, WTI
-  { label: 'S&P 500',   value: 20.60,  hargaAwal: '6285.21',    hargaAkhir: '7580.07'     }, // Close 8 Sep 2026
-  { label: 'BTC',       value: -31.64, hargaAwal: '~$113,184',  hargaAkhir: '~$77.368,07' }, // Close 8 Sep 2026
-  { label: 'JPM',       value: 16.51,  hargaAwal: '~$289.28',   hargaAkhir: '~$337.04'    }, // Close 8 Sep 2026
-  { label: 'BRK.B',     value: 25.67,  hargaAwal: '~$431.69',   hargaAkhir: '~$542.49'    }, // Close 8 Sep 2026
-  { label: 'NVDA',      value: 18.00,  hargaAwal: '173.41',     hargaAkhir: '204.62'      }, // Close 8 Sep 2026
-  { label: 'IHSG',      value: -33.04, hargaAwal: '~7537.77',   hargaAkhir: '~5047.00'   }, // Close 8 Sep 2026
-  { label: 'BBCA',      value: -39.82, hargaAwal: '8275',       hargaAkhir: '4980'       }, // Close 8 Sep 2026
-  { label: 'Antam',     value: 32.88,  hargaAwal: '1901K',      hargaAkhir: '2526K'       }, // 8 Sep 2026, Logam Mulia Rp2.627.000/gram
+  { label: 'GOLD',      value: 23.81,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4070.28'   },
+  { label: 'Crude Oil', value: 34.33,  hargaAwal: '~$67.26',    hargaAkhir: '~$90.35'     },
+  { label: 'S&P 500',   value: 17.37,  hargaAwal: '6285.21',    hargaAkhir: '7376.86'     },
+  { label: 'BTC',       value: -32.84, hargaAwal: '~$113,184',  hargaAkhir: '~$76.019,58' },
+  { label: 'JPM',       value: 15.63,  hargaAwal: '~$289.28',   hargaAkhir: '~$334.49'    },
+  { label: 'BRK.B',     value: 32.25,  hargaAwal: '~$431.69',   hargaAkhir: '~$570.89'    },
+  { label: 'NVDA',      value: 7.63,   hargaAwal: '173.41',     hargaAkhir: '186.64'      },
+  { label: 'IHSG',      value: -33.00, hargaAwal: '~7537.77',   hargaAkhir: '~5050.42'   },
+  { label: 'BBCA',      value: -37.16, hargaAwal: '8275',       hargaAkhir: '5200'        },
+  { label: 'Antam',     value: 33.88,  hargaAwal: 'Rp1.901.000', hargaAkhir: 'Rp2.545.000' },
 ];
 
 /* =====================
