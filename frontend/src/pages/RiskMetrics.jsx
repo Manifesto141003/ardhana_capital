@@ -21,7 +21,7 @@ export const RiskMetrics = () => {
     {
       icon: TrendingDown,
       title: 'Max Drawdown',
-      value: '-17%',
+      value: '-19,85%',
       description: 'Largest peak-to-trough decline',
       color: 'text-destructive',
     },
