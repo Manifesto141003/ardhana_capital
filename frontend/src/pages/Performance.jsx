@@ -242,7 +242,17 @@ export const Performance = () => {
                       {p.outperformance !== undefined && (
                         <div className="pt-2 text-sm">
                           Outperformance:{' '}
-                          <span className="text-emerald-400 font-semibold">+{p.outperformance}%</span>
+                          <span
+                            className={`font-semibold ${
+                              p.outperformance > 0
+                                ? 'text-emerald-400'
+                                : p.outperformance < 0
+                                  ? 'text-red-400'
+                                  : 'text-white/60'
+                            }`}
+                          >
+                            {formatSignedPercent(p.outperformance)}
+                          </span>
                         </div>
                       )}
                     </motion.div>
