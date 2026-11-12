@@ -107,8 +107,8 @@ export const Performance = () => {
     { title: 'Quarter II',  period: 'Nov 2025 – Jan 2026', return: 6.79,  benchmark: 6.79,  outperformance: 0, status: 'done'        },
     { title: 'Quarter III', period: 'Feb – Apr 2026',      return: 3.66, benchmark: 3.66, outperformance: 0, status: 'done'     },
     { title: 'Quarter IV',  period: 'May – Jul 2026',      return: 3.42, benchmark: 3.42,     outperformance: 0, status: 'done' },
-    { title: 'Quarter V',  period: 'Aug – Oct 2026',      return: -14.31, benchmark: 29.4,     outperformance: 0, status: 'done' },
-    { title: 'Quarter VI',  period: 'Nov – Jan 2027',      return: 18.52, benchmark: 6.79,     outperformance: 0, status: 'ongoing' }
+    { title: 'Quarter V',  period: 'Aug – Oct 2026',      return: -11.95, benchmark: 29.4,     outperformance: -41.35, status: 'done' },
+    { title: 'Quarter VI',  period: 'Nov – Jan 2027',      return: 25.24, benchmark: 6.79,     outperformance: 16.45, status: 'ongoing' }
   ];
 
   const yearlyData = [
