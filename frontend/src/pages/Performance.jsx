@@ -66,7 +66,7 @@ const MarketTooltip = ({ active, payload, label }) => {
    MARKET DATA
 ===================== */
 const MARKET_DATA = [
-  { label: 'Ardhana',   value: 69.81,  hargaAwal: '~$2200',     hargaAkhir: '~$30000' }, // belum diupdate, lihat catatan
+  { label: 'Ardhana',   value: 69.81,  hargaAwal: '~$2200',     hargaAkhir: '~$30711.68' }, // belum diupdate, lihat catatan
   { label: 'GOLD',      value: 7.61,   hargaAwal: '~$3287.65',  hargaAkhir: '~$3537.89'   },
   { label: 'Crude Oil', value: 24.31,  hargaAwal: '~$67.26',    hargaAkhir: '~$83.61'     },
   { label: 'S&P 500',   value: 9.95,   hargaAwal: '6285.21',    hargaAkhir: '6910.39'     },
