@@ -67,16 +67,17 @@ const MarketTooltip = ({ active, payload, label }) => {
 ===================== */
 const MARKET_DATA = [
   { label: 'Ardhana',   value: 51.66,  hargaAwal: '~$2200',     hargaAkhir: '~$27779' }, // belum diupdate, lihat catatan
-  { label: 'GOLD',      value: 23.81,  hargaAwal: '~$3287.65',  hargaAkhir: '~$4070.28'   },
-  { label: 'Crude Oil', value: 34.33,  hargaAwal: '~$67.26',    hargaAkhir: '~$90.35'     },
-  { label: 'S&P 500',   value: 17.37,  hargaAwal: '6285.21',    hargaAkhir: '7376.86'     },
-  { label: 'BTC',       value: -32.84, hargaAwal: '~$113,184',  hargaAkhir: '~$76.019,58' },
-  { label: 'JPM',       value: 15.63,  hargaAwal: '~$289.28',   hargaAkhir: '~$334.49'    },
-  { label: 'BRK.B',     value: 32.25,  hargaAwal: '~$431.69',   hargaAkhir: '~$570.89'    },
-  { label: 'NVDA',      value: 7.63,   hargaAwal: '173.41',     hargaAkhir: '186.64'      },
-  { label: 'IHSG',      value: -33.00, hargaAwal: '~7537.77',   hargaAkhir: '~5050.42'   },
-  { label: 'BBCA',      value: -37.16, hargaAwal: '8275',       hargaAkhir: '5200'        },
-  { label: 'Antam',     value: 33.88,  hargaAwal: 'Rp1.901.000', hargaAkhir: 'Rp2.545.000' },
+  { label: 'GOLD',      value: 7.61,   hargaAwal: '~$3287.65',  hargaAkhir: '~$3537.89'   },
+  { label: 'Crude Oil', value: 24.31,  hargaAwal: '~$67.26',    hargaAkhir: '~$83.61'     },
+  { label: 'S&P 500',   value: 9.95,   hargaAwal: '6285.21',    hargaAkhir: '6910.39'     },
+  { label: 'BTC',       value: -48.37, hargaAwal: '~$113,184',  hargaAkhir: '~$58,438'    },
+  { label: 'JPM',       value: 7.40,   hargaAwal: '~$289.28',   hargaAkhir: '~$310.68'    },
+  { label: 'BRK.B',     value: 32.04,  hargaAwal: '~$431.69',   hargaAkhir: '~$570.00'    },
+  { label: 'NVDA',      value: -27.61, hargaAwal: '173.41',     hargaAkhir: '125.53'      },
+  { label: 'IHSG',      value: -31.73, hargaAwal: '~7537.77',   hargaAkhir: '~5146'       },
+  { label: 'BBCA',      value: -32.93, hargaAwal: '8275',       hargaAkhir: '5550'        },
+  { label: 'Antam',     value: 31.25,  hargaAwal: 'Rp1.901.000', hargaAkhir: 'Rp2.495.000' },
+  { label: 'Anthropic', value: -22.69,  hargaAwal: '115',         hargaAkhir: '88.91'       },
 ];
 
 /* =====================
@@ -414,9 +415,9 @@ export const Performance = () => {
               <div className="mt-8 pt-6 border-t border-white/10 text-center">
                 <p className="text-sm text-white/50 mb-2">Periode Analisis</p>
                 <p className="text-2xl font-bold text-white">
-                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 15 November 2026
+                  1 Agustus 2025 <span className="text-white/40 mx-3">–</span> 21 November 2026
                 </p>
-                <p className="text-xs text-white/35 mt-2">Performa aset selama 1 tahun 3 bulan 14 hari investasi</p>
+                <p className="text-xs text-white/35 mt-2">Performa aset selama 1 tahun 3 bulan 20 hari investasi</p>
               </div>
             </div>
           </motion.div>
