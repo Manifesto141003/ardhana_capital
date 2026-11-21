@@ -135,7 +135,7 @@ export const Performance = () => {
     }
   };
 
-  const totalReturn = formatSignedPercent(63.36);
+  const totalReturn = formatSignedPercent(69.81);
 
   const badgeStyle = (status) =>
     status === 'done'
